@@ -1,22 +1,23 @@
 import React from 'react'
+import classes from './User.module.css'
 
 const user = props => {
   return(
-    <div>
+    <div className={classes.User}>
       {/* <img src="{props.image}" alt={props.name} /> */}
-      <div>name: {props.name}</div>
+      <div className={classes.name}>name: {props.name}</div>
       <button onClick={() => props.handelFollowClick(props.id)}>
-        {props.isFollowed ? 'Unfollow' : 'Follow'}
+        {props.isFollowed === 'active' ? 'Unfollow' : 'Follow'}
       </button>
       <input 
-        checked={props.isStared} 
+        className={classes.hvrIconPop}
+        checked={props.isStared === 'active' ? true : false} 
         onChange={() => props.handelStarClick(props.id)}
         type='checkbox' 
       />
       <div>date: {props.date}</div>
       <div>reading time: {props.readingTime}</div>
       <div>image here</div>
-      <hr />
     </div>
   )
 }

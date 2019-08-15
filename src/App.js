@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import data from './data/users-data.json'
-import User from './components/User'
+import User from './components/User/User'
 
 export default class App extends React.Component {
   constructor() {
@@ -15,7 +15,7 @@ export default class App extends React.Component {
     this.setState(prevState => {
         const updatedUsers = prevState.users.map(user => {
             if (user.id === id) {
-              user.isFollowed = !user.isFollowed
+              user.isFollowed === 'active' ? user.isFollowed = 'idle' : user.isFollowed = 'active'
             }
             return user
         })
@@ -29,7 +29,7 @@ export default class App extends React.Component {
     this.setState(prevState => {
         const updatedUsers = prevState.users.map(user => {
             if (user.id === id) {
-              user.isStared = !user.isStared
+              user.isStared === 'active' ? user.isStared = 'idle' : user.isStared = 'active'
             }
             return user
         })
