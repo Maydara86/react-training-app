@@ -1,92 +1,92 @@
 [
     {
-      "_id": "5d552d0058f193f2795fc814",
+      "id": "5d552d0058f193f2795fc814",
       "isFollowed": true,
       "isStared": false,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 20,
       "name": "Walton Morton",
-      "date": "2014-09-26T10:17:32 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d00b20b141dff10d2a2",
+      "id": "5d552d00b20b141dff10d2a2",
       "isFollowed": false,
       "isStared": true,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 3,
       "name": "Joy Dennis",
-      "date": "2014-10-01T07:31:32 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d006840b582f6eb01ad",
+      "id": "5d552d006840b582f6eb01ad",
       "isFollowed": false,
       "isStared": false,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 14,
       "name": "Frances Smith",
-      "date": "2018-01-06T12:29:06 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d00f2bec48f5a14f086",
+      "id": "5d552d00f2bec48f5a14f086",
       "isFollowed": true,
       "isStared": true,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 9,
       "name": "Erma Kirby",
-      "date": "2017-01-20T02:46:40 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d00d3198ce156a01f11",
+      "id": "5d552d00d3198ce156a01f11",
       "isFollowed": false,
       "isStared": true,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 3,
       "name": "Burgess Webb",
-      "date": "2019-02-09T10:10:26 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d001329adcba07ffe74",
+      "id": "5d552d001329adcba07ffe74",
       "isFollowed": false,
       "isStared": false,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 15,
       "name": "Britney Stephenson",
-      "date": "2014-11-14T09:27:26 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d00ab6a37224d329fd0",
+      "id": "5d552d00ab6a37224d329fd0",
       "isFollowed": false,
       "isStared": false,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 6,
       "name": "Kristi Fitzgerald",
-      "date": "2014-01-26T12:03:45 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d00e4fa9a6d69567d46",
+      "id": "5d552d00e4fa9a6d69567d46",
       "isFollowed": false,
       "isStared": true,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 7,
       "name": "Ines Dalton",
-      "date": "2017-09-20T04:36:21 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d00b3174cabfa32d3bf",
+      "id": "5d552d00b3174cabfa32d3bf",
       "isFollowed": true,
       "isStared": false,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 9,
       "name": "Terra Hoffman",
-      "date": "2018-01-24T04:40:37 -01:00"
+      "date": "Aug 9"
     },
     {
-      "_id": "5d552d0067165d459c75f95b",
+      "id": "5d552d0067165d459c75f95b",
       "isFollowed": true,
       "isStared": false,
-      "image": "../assets/images/avata.png",
+      "image": "./assets/images/avata.png",
       "readingTime": 8,
       "name": "Mccall Yang",
-      "date": "2018-02-06T10:34:09 -01:00"
+      "date": "Aug 9"
     }
   ]

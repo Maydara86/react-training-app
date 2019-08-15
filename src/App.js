@@ -1,13 +1,64 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 import data from './data/users-data.json'
+import User from './components/User'
 
 export default class App extends React.Component {
   constructor() {
     super()
+    this.state = {users: data}
+    this.clickFollowHandler = this.clickFollowHandler.bind(this)
+    this.clickStarHandler = this.clickStarHandler.bind(this)
+  }
+
+  clickFollowHandler(id) {
+    this.setState(prevState => {
+        const updatedUsers = prevState.users.map(user => {
+            if (user.id === id) {
+              user.isFollowed = !user.isFollowed
+            }
+            return user
+        })
+        return {
+            users: updatedUsers
+        }
+    })
+  }
+
+  clickStarHandler(id) {
+    this.setState(prevState => {
+        const updatedUsers = prevState.users.map(user => {
+            if (user.id === id) {
+              user.isStared = !user.isStared
+            }
+            return user
+        })
+        return {
+            users: updatedUsers
+        }
+    })
   }
 
   render() {
-    return (<h1>Working fine</h1>)
+    return (
+      <div>
+        {this.state.users.map(u => {
+          return (
+            <User 
+              key={u.id}
+              id={u.id}
+              name={u.name}
+              date={u.date}
+              readingTime={u.readingTime}
+              isStared={u.isStared}
+              isFollowed={u.isFollowed}
+              image={u.image}
+              handelFollowClick={this.clickFollowHandler}
+              handelStarClick={this.clickStarHandler}
+            />
+          )
+        })}
+      </div>
+    )
   }
 }
