@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './User.module.css'
+import myImage from '../../assets/images/avatar.png'
 
 const User = props => {
   return(
@@ -17,7 +18,7 @@ const User = props => {
       />
       <div>date: {props.date}</div>
       <div>reading time: {props.readingTime}</div>
-      <div>image here</div>
+      <img src={myImage} alt={props.name} />
     </div>
   )
 }
