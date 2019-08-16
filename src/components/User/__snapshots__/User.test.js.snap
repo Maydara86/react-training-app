@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Follow button changes the sate when clicked 1`] = `
+<div
+  className="User"
+>
+  <div
+    className="name"
+  >
+    name: 
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Unfollow
+  </button>
+  <input
+    checked={false}
+    className="hvrIconPop"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <div>
+    date: 
+  </div>
+  <div>
+    reading time: 
+  </div>
+  <div>
+    image here
+  </div>
+</div>
+`;
