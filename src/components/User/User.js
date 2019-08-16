@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './User.module.css'
 
-const user = props => {
+const User = props => {
   return(
     <div className={classes.User}>
       {/* <img src="{props.image}" alt={props.name} /> */}
@@ -22,4 +22,4 @@ const user = props => {
   )
 }
 
-export default user
+export default User
