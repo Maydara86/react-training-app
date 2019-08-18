@@ -53,8 +53,8 @@ export default class App extends React.Component {
               isStared={u.isStared}
               isFollowed={u.isFollowed}
               image={u.image}
-              handelFollowClick={this.clickFollowHandler}
-              handelStarClick={this.clickStarHandler}
+              handleFollowClick={this.clickFollowHandler}
+              handleStarClick={this.clickStarHandler}
             />
           )
         })}
