@@ -40,11 +40,12 @@ exports[`renders correctly when there is one user 1`] = `
     className="name"
   >
     name: 
+    Walton Morton
   </div>
   <button
     onClick={[Function]}
   >
-    Follow
+    Unfollow
   </button>
   <input
     checked={false}
@@ -54,11 +55,14 @@ exports[`renders correctly when there is one user 1`] = `
   />
   <div>
     date: 
+    Aug 9
   </div>
   <div>
     reading time: 
+    20
   </div>
   <img
+    alt="Walton Morton"
     src="avatar.png"
   />
 </div>
