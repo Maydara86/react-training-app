@@ -1,4 +1,60 @@
-.User {
+.container {
+  border: 2px solid #000;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+
+.contentContainer {
+  border: 2px solid blue;
+  /* margin: 5px;
+  padding: 5px; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column wrap;
+}
+
+.imageContainer {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  border-radius: 100%;
+  border: 1px solid red;
+  align-self: flex-start;
+  flex: 0 1 30px;
+}
+
+.contentContainer > button {
+  margin: 0 5px 0 5px;
+  flex: 0 1 20px;
+  flex-flow: column wrap;
+  height: 50%;
+  order: 1;
+}
+
+.name {
+  margin: 0 5px 0 5px;
+  height: 50%;
+}
+
+.date {
+  margin: 0 5px 0 5px;
+  height: 50%;
+  align-self: flex-end;
+  /* justify-content: flex-start; */
+}
+
+.time {
+  margin: 0 5px 0 5px;
+  height: 50%;
+  align-self: flex-end;
+  /* justify-content: flex-start; */
+}
+
+
+/* .User {
     width: 60%;
     margin: 16px auto;
     border: 1px solid #eee;
@@ -10,10 +66,10 @@
 .User .name {
     font-family: Verdana, Geneva, sans-serif;
     color: red;
-}
+} */
 
 /* Icon Pop */
-@-webkit-keyframes hvr-icon-pop {
+/* @-webkit-keyframes hvr-icon-pop {
     50% {
       -webkit-transform: scale(1.5);
       transform: scale(1.5);
@@ -53,4 +109,4 @@
     animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-  }
+  } */
