@@ -16,7 +16,15 @@ const users = {
 
 it('renders correctly when there are no users', () => {
   const tree = renderer.create(<User 
-    handleFollowClick={() => 'test'}
+    key={''}
+    id={''}
+    name={''}
+    date={''}
+    readingTime={''}
+    isStared={''}
+    isFollowed={''}
+    image={''}
+    handleFollowClick={() => {}}
     handleStarClick={() => {}} 
   />).toJSON();
   expect(tree).toMatchSnapshot();

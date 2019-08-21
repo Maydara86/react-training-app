@@ -1,0 +1,426 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the App component on the DOM 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Walton Morton"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Walton Morton
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Unfollow
+      </button>
+      <input
+        checked={false}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        20
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Joy Dennis"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Joy Dennis
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Follow
+      </button>
+      <input
+        checked={true}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        3
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Frances Smith"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Frances Smith
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Follow
+      </button>
+      <input
+        checked={false}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        14
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Erma Kirby"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Erma Kirby
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Unfollow
+      </button>
+      <input
+        checked={true}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        9
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Burgess Webb"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Burgess Webb
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Follow
+      </button>
+      <input
+        checked={true}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        3
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Britney Stephenson"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Britney Stephenson
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Follow
+      </button>
+      <input
+        checked={false}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        15
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Kristi Fitzgerald"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Kristi Fitzgerald
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Follow
+      </button>
+      <input
+        checked={false}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        6
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Ines Dalton"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Ines Dalton
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Follow
+      </button>
+      <input
+        checked={true}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        7
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Terra Hoffman"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Terra Hoffman
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Unfollow
+      </button>
+      <input
+        checked={false}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        9
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <img
+      alt="Mccall Yang"
+      className="imageContainer"
+      src="avatar.png"
+    />
+    <div
+      className="contentContainer"
+    >
+      <div
+        className="name"
+      >
+        name: 
+        Mccall Yang
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Unfollow
+      </button>
+      <input
+        checked={false}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        8
+      </div>
+    </div>
+  </div>
+</div>
+`;

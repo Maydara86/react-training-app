@@ -17,6 +17,7 @@ describe('App Component', () => {
     const AppComponent = shallow(<App />)
     const wrapper = AppComponent.instance()
     wrapper.clickFollowHandler('5d552d0058f193f2795fc814')
+    wrapper.clickStarHandler()
     expect(wrapper.state.users[0].isFollowed).toEqual('idle')
   })
 })
