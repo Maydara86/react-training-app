@@ -9,18 +9,22 @@ const User = ({ id, name, date, isFollowed, isStared, handleFollowClick, handleS
       <div className={classes.container} key={id}>
         <img className={classes.imageContainer} src={myImage} alt={name} />
         <div className={classes.contentContainer}>
-          <div className={classes.name}>name: {name}</div>
-          <button onClick={() => handleFollowClick(id)}>
-            {isFollowed === 'active' ? 'Unfollow' : 'Follow'}
-          </button>
-          <input 
-            className={classes.hvrIconPop}
-            checked={isStared === 'active' ? true : false} 
-            onChange={() => handleStarClick(id)}
-            type='checkbox' 
-          />
-          <div className={classes.date}>date: {date}</div>
-          <div className={classes.time}>reading time: {readingTime}</div>
+          <div className={classes.contentContainerRow1}>
+            <div className={classes.name}>name: {name}</div>
+            <button onClick={() => handleFollowClick(id)}>
+              {isFollowed === 'active' ? 'Unfollow' : 'Follow'}
+            </button>
+          </div>
+          <div className={classes.contentContainerRow2}>
+            <div className={classes.date}>date: {date}</div>
+            <div className={classes.time}>reading time: {readingTime}</div>
+            <input 
+              className={classes.hvrIconPop}
+              checked={isStared === 'active' ? true : false} 
+              onChange={() => handleStarClick(id)}
+              type='checkbox' 
+            />
+          </div>
         </div>
       </div>
     )

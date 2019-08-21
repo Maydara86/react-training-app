@@ -1,19 +1,37 @@
 .container {
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   margin: 5px;
-  padding: 5px;
+  /*padding: 5px; */
   display: flex;
   flex-wrap: wrap;
   flex-flow: row wrap;
+  align-content: center;
 }
 
 .contentContainer {
-  border: 2px solid blue;
+  display: flex;
+  /* border: 2px solid yellow; */
+  flex-flow: column wrap;
+}
+
+.contentContainerRow1 {
+  /* border: 2px solid blue; */
+  /* margin: 5px; */
+  /* padding: 5px;  */
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  height: 50%;
+}
+
+.contentContainerRow2 {
+  /* border: 2px solid violet; */
   /* margin: 5px;
   padding: 5px; */
   display: flex;
-  flex-wrap: wrap;
-  flex-flow: column wrap;
+  flex-wrap: nowrap;
+  flex-flow: row wrap;
+  height: 50%;
 }
 
 .imageContainer {
@@ -22,15 +40,15 @@
   display: flex;
   border-radius: 100%;
   border: 1px solid red;
-  align-self: flex-start;
+  align-self: center;
   flex: 0 1 30px;
 }
 
-.contentContainer > button {
+.contentContainerRow1 > button {
   margin: 0 5px 0 5px;
   flex: 0 1 20px;
   flex-flow: column wrap;
-  height: 50%;
+  height: 60%;
   order: 1;
 }
 
