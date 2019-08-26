@@ -14,33 +14,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Walton Morton
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Unfollow
-      </button>
-      <input
-        checked={false}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Walton Morton
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Unfollow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        20
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          20
+        </div>
+        <input
+          checked={false}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -56,33 +64,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Joy Dennis
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Follow
-      </button>
-      <input
-        checked={true}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Joy Dennis
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Follow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        3
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          3
+        </div>
+        <input
+          checked={true}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -98,33 +114,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Frances Smith
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Follow
-      </button>
-      <input
-        checked={false}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Frances Smith
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Follow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        14
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          14
+        </div>
+        <input
+          checked={false}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -140,33 +164,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Erma Kirby
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Unfollow
-      </button>
-      <input
-        checked={true}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Erma Kirby
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Unfollow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        9
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          9
+        </div>
+        <input
+          checked={true}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -182,33 +214,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Burgess Webb
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Follow
-      </button>
-      <input
-        checked={true}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Burgess Webb
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Follow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        3
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          3
+        </div>
+        <input
+          checked={true}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -224,33 +264,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Britney Stephenson
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Follow
-      </button>
-      <input
-        checked={false}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Britney Stephenson
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Follow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        15
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          15
+        </div>
+        <input
+          checked={false}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -266,33 +314,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Kristi Fitzgerald
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Follow
-      </button>
-      <input
-        checked={false}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Kristi Fitzgerald
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Follow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        6
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          6
+        </div>
+        <input
+          checked={false}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -308,33 +364,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Ines Dalton
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Follow
-      </button>
-      <input
-        checked={true}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Ines Dalton
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Follow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        7
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          7
+        </div>
+        <input
+          checked={true}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -350,33 +414,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Terra Hoffman
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Unfollow
-      </button>
-      <input
-        checked={false}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Terra Hoffman
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Unfollow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        9
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          9
+        </div>
+        <input
+          checked={false}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>
@@ -392,33 +464,41 @@ exports[`renders the App component on the DOM 1`] = `
       className="contentContainer"
     >
       <div
-        className="name"
+        className="contentContainerRow1"
       >
-        name: 
-        Mccall Yang
-      </div>
-      <button
-        onClick={[Function]}
-      >
-        Unfollow
-      </button>
-      <input
-        checked={false}
-        className="hvrIconPop"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="date"
-      >
-        date: 
-        Aug 9
+        <div
+          className="name"
+        >
+          name: 
+          Mccall Yang
+        </div>
+        <button
+          onClick={[Function]}
+        >
+          Unfollow
+        </button>
       </div>
       <div
-        className="time"
+        className="contentContainerRow2"
       >
-        reading time: 
-        8
+        <div
+          className="date"
+        >
+          date: 
+          Aug 9
+        </div>
+        <div
+          className="time"
+        >
+          reading time: 
+          8
+        </div>
+        <input
+          checked={false}
+          className="hvrIconPop"
+          onChange={[Function]}
+          type="checkbox"
+        />
       </div>
     </div>
   </div>

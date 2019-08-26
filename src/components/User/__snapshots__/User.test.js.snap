@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly when there are no users 1`] = `
+exports[`renders correctly when there are no user 1`] = `
 <div
   className="container"
 >
@@ -13,33 +13,41 @@ exports[`renders correctly when there are no users 1`] = `
     className="contentContainer"
   >
     <div
-      className="name"
+      className="contentContainerRow1"
     >
-      name: 
-      
-    </div>
-    <button
-      onClick={[Function]}
-    >
-      Follow
-    </button>
-    <input
-      checked={false}
-      className="hvrIconPop"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <div
-      className="date"
-    >
-      date: 
-      
+      <div
+        className="name"
+      >
+        name: 
+        
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Follow
+      </button>
     </div>
     <div
-      className="time"
+      className="contentContainerRow2"
     >
-      reading time: 
-      
+      <div
+        className="date"
+      >
+        date: 
+        
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        
+      </div>
+      <input
+        checked={false}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
     </div>
   </div>
 </div>
@@ -58,33 +66,41 @@ exports[`renders correctly when there is one user 1`] = `
     className="contentContainer"
   >
     <div
-      className="name"
+      className="contentContainerRow1"
     >
-      name: 
-      Walton Morton
-    </div>
-    <button
-      onClick={[Function]}
-    >
-      Unfollow
-    </button>
-    <input
-      checked={false}
-      className="hvrIconPop"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <div
-      className="date"
-    >
-      date: 
-      Aug 9
+      <div
+        className="name"
+      >
+        name: 
+        Walton Morton
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Unfollow
+      </button>
     </div>
     <div
-      className="time"
+      className="contentContainerRow2"
     >
-      reading time: 
-      20
+      <div
+        className="date"
+      >
+        date: 
+        Aug 9
+      </div>
+      <div
+        className="time"
+      >
+        reading time: 
+        20
+      </div>
+      <input
+        checked={false}
+        className="hvrIconPop"
+        onChange={[Function]}
+        type="checkbox"
+      />
     </div>
   </div>
 </div>
