@@ -77,6 +77,14 @@
   overflow: visible;
   font: 400 13.3333px Arial;
   font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: border-color 0.5s, color 0.5s, fill 0.5s
+}
+
+.contentContainerRow1 > button:hover {
+  border-color: rgba(0, 0, 0);
+  color: rgba(0, 0, 0);
+  fill: rgba(0, 0, 0);
 }
 
 .name {
