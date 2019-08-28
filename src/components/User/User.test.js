@@ -24,7 +24,7 @@ it('renders correctly when there is one user', () => {
     date={user.date}
     readingTime={user.readingTime}
     isStarred={user.isStarred}
-    isFollowed={user.isFollowed}
+    isFollowed='idle'
     image={user.image}
     handleFollowClick={() => 'test'}
     handleStarClick={() => {}}
@@ -57,7 +57,7 @@ it('when the follow button is clicked a callback is executed', () => {
 
 
 
-it('Change the style of the star svg', () => {
+it('Change the style of the star svg depending on the', () => {
   const mockFollowClick = jest.fn();
   const mockStarClick = jest.fn();
 
@@ -67,7 +67,7 @@ it('Change the style of the star svg', () => {
     name={user.name}
     date={user.date}
     readingTime={user.readingTime}
-    isStarred={user.isStarred}
+    isStarred='active'
     isFollowed={user.isFollowed}
     image={user.image}
     handleFollowClick={mockFollowClick}
@@ -75,25 +75,20 @@ it('Change the style of the star svg', () => {
   />)
 
   const testInstance = testRenderer.root
-  // const button = testInstance.findByType('button')
-  // const icon = testInstance.findByType(Icon)
-  // testRenderer.root.findByType(Icon).onClick()
-  // testRenderer.root.findByType(Icon).onClick()
-  expect(testInstance.findByType(Icon).props.color).toBe('grey')
-  testInstance.findByType(Icon).simulate('click')
   expect(testInstance.findByType(Icon).props.color).toBe('gold')
+})
 
+it('Simulate a click on the svg star', () => {
+  const mockStarClick = jest.fn();
+  const testRenderer = TestRenderer.create(<Icon 
+    color='grey' 
+    handleStarClick={mockStarClick} 
+    id='5d552d0058f193f2795fc814' 
+  />)
 
-  // button.props.onClick();
-  // expect(mockFollowClick).toHaveBeenCalled();
-
-  // button.props.onClick();
-  // expect(mockFollowClick).toHaveBeenCalledWith('5d552d0058f193f2795fc814');
-
-  // input.props.onChange();
-  // expect(mockStarClick).toHaveBeenCalled();
-
-  // icon.onClick();
-  // expect(mockStarClick).toHaveBeenCalledWith('5d552d0058f193f2795fc814');
-  
+  const testInstance = testRenderer.root
+  let svg = testInstance.findByType('svg')
+  svg.props.onClick()
+  // expect(testInstance.props.color).toBe('gold')
+  expect(mockStarClick).toHaveBeenCalledWith('5d552d0058f193f2795fc814')
 })
