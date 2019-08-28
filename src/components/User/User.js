@@ -3,9 +3,9 @@ import classes from './User.module.css';
 import myImage from '../../assets/images/avatar.png';
 import PropTypes from 'prop-types';
 
-const User = ({ id, name, date, isFollowed, isStared, handleFollowClick, handleStarClick, readingTime }) => {
+const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handleStarClick, readingTime }) => {
   
-  let starColor = isStared === 'active' ? 'gold' : 'grey'
+  let starColor = isStarred === 'active' ? 'gold' : 'grey'
     return(
       <div className={classes.container} key={id}>
         <img className={classes.imageContainer} src={myImage} alt={name} />

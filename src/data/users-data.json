@@ -2,7 +2,7 @@
     {
       "id": "5d552d0058f193f2795fc814",
       "isFollowed": "active",
-      "isStared": "idle",
+      "isStarred": "idle",
       "image": "./assets/images/avata.png",
       "readingTime": 20,
       "name": "Walton Morton",
@@ -11,7 +11,7 @@
     {
       "id": "5d552d00b20b141dff10d2a2",
       "isFollowed": "idle",
-      "isStared": "active",
+      "isStarred": "active",
       "image": "./assets/images/avata.png",
       "readingTime": 3,
       "name": "Joy Dennis",
@@ -20,7 +20,7 @@
     {
       "id": "5d552d006840b582f6eb01ad",
       "isFollowed": "idle",
-      "isStared": "idle",
+      "isStarred": "idle",
       "image": "./assets/images/avata.png",
       "readingTime": 14,
       "name": "Frances Smith",
@@ -29,7 +29,7 @@
     {
       "id": "5d552d00f2bec48f5a14f086",
       "isFollowed": "active",
-      "isStared": "active",
+      "isStarred": "active",
       "image": "./assets/images/avata.png",
       "readingTime": 9,
       "name": "Erma Kirby",
@@ -38,7 +38,7 @@
     {
       "id": "5d552d00d3198ce156a01f11",
       "isFollowed": "idle",
-      "isStared": "active",
+      "isStarred": "active",
       "image": "./assets/images/avata.png",
       "readingTime": 3,
       "name": "Burgess Webb",
@@ -47,7 +47,7 @@
     {
       "id": "5d552d001329adcba07ffe74",
       "isFollowed": "idle",
-      "isStared": "idle",
+      "isStarred": "idle",
       "image": "./assets/images/avata.png",
       "readingTime": 15,
       "name": "Britney Stephenson",
@@ -56,7 +56,7 @@
     {
       "id": "5d552d00ab6a37224d329fd0",
       "isFollowed": "idle",
-      "isStared": "idle",
+      "isStarred": "idle",
       "image": "./assets/images/avata.png",
       "readingTime": 6,
       "name": "Kristi Fitzgerald",
@@ -65,7 +65,7 @@
     {
       "id": "5d552d00e4fa9a6d69567d46",
       "isFollowed": "idle",
-      "isStared": "active",
+      "isStarred": "active",
       "image": "./assets/images/avata.png",
       "readingTime": 7,
       "name": "Ines Dalton",
@@ -74,7 +74,7 @@
     {
       "id": "5d552d00b3174cabfa32d3bf",
       "isFollowed": "active",
-      "isStared": "idle",
+      "isStarred": "idle",
       "image": "./assets/images/avata.png",
       "readingTime": 9,
       "name": "Terra Hoffman",
@@ -83,7 +83,7 @@
     {
       "id": "5d552d0067165d459c75f95b",
       "isFollowed": "active",
-      "isStared": "idle",
+      "isStarred": "idle",
       "image": "./assets/images/avata.png",
       "readingTime": 8,
       "name": "Mccall Yang",

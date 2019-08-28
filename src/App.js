@@ -29,7 +29,7 @@ export default class App extends React.Component {
     this.setState(prevState => {
         const updatedUsers = prevState.users.map(user => {
             if (user.id === id) {
-              user.isStared === 'active' ? user.isStared = 'idle' : user.isStared = 'active'
+              user.isStarred === 'active' ? user.isStarred = 'idle' : user.isStarred = 'active'
             }
             return user
         })
@@ -50,7 +50,7 @@ export default class App extends React.Component {
               name={u.name}
               date={u.date}
               readingTime={u.readingTime}
-              isStared={u.isStared}
+              isStarred={u.isStarred}
               isFollowed={u.isFollowed}
               image={u.image}
               handleFollowClick={this.clickFollowHandler}

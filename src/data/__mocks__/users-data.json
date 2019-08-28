@@ -2,7 +2,7 @@
   {
     "id": "5d552d0058f193f2795fc814",
     "isFollowed": "active",
-    "isStared": "idle",
+    "isStarred": "idle",
     "image": "./assets/images/avata.png",
     "readingTime": 20,
     "name": "Walton Morton",
@@ -11,7 +11,7 @@
   {
     "id": "5d552d00b20b141dff10d2a2",
     "isFollowed": "idle",
-    "isStared": "active",
+    "isStarred": "active",
     "image": "./assets/images/avata.png",
     "readingTime": 3,
     "name": "Joy Dennis",

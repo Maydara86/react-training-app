@@ -8,7 +8,7 @@ import User, {Icon} from './User';
 const user = {
   "id": "5d552d0058f193f2795fc814",
   "isFollowed": "active",
-  "isStared": "idle",
+  "isStarred": "idle",
   "image": "./assets/images/avata.png",
   "readingTime": 20,
   "name": "Walton Morton",
@@ -23,7 +23,7 @@ it('renders correctly when there is one user', () => {
     name={user.name}
     date={user.date}
     readingTime={user.readingTime}
-    isStared={user.isStared}
+    isStarred={user.isStarred}
     isFollowed={user.isFollowed}
     image={user.image}
     handleFollowClick={() => 'test'}
@@ -43,7 +43,7 @@ it('when the follow button is clicked a callback is executed', () => {
     name={user.name}
     date={user.date}
     readingTime={user.readingTime}
-    isStared={user.isStared}
+    isStarred={user.isStarred}
     isFollowed={user.isFollowed}
     image={user.image}
     handleFollowClick={mockFollowClick}
@@ -67,7 +67,7 @@ it('Change the style of the star svg', () => {
     name={user.name}
     date={user.date}
     readingTime={user.readingTime}
-    isStared={user.isStared}
+    isStarred={user.isStarred}
     isFollowed={user.isFollowed}
     image={user.image}
     handleFollowClick={mockFollowClick}
