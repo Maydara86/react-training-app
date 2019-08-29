@@ -3,7 +3,7 @@ import classes from './User.module.css';
 import myImage from '../../assets/images/avatar.png';
 import PropTypes from 'prop-types';
 
-const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handleStarClick, readingTime }) => {
+const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handleStarClick, readingTime, calledFromArticle }) => {
   
   let starColor = isStarred === 'active' ? 'gold' : 'grey'
     return(
@@ -12,9 +12,9 @@ const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handle
         <div className={classes.contentContainer}>
           <div className={classes.contentContainerRow1}>
             <div className={classes.name}>{name}</div>
-            <button onClick={() => handleFollowClick(id)}>
+            {!calledFromArticle && <button onClick={() => handleFollowClick(id)}>
               {isFollowed === 'active' ? 'Unfollow' : 'Follow'}
-            </button>
+            </button>}
           </div>
           <div className={classes.contentContainerRow2}>
             <div className={classes.date}>{date}</div>

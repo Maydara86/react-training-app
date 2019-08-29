@@ -1,23 +1,60 @@
 import React from 'react'
 import classes from './Article.module.css';
 import myImage from '../../assets/images/article.jpeg'
+import User from '../User/User'
 // import PropTypes from 'prop-types'
 
-export default function Article({id, name, claps, bookmark, handleClapClick, handleBookmarkClick, didClap}) {
-  const bookmarkFilled = (<BookmarkFilled key={id} bookmarkClick={handleBookmarkClick} id={id} />)
-  const bookmarkUnfilled = (<BookmarkUnfilled key={id} bookmarkClick={handleBookmarkClick} id={id} />)
-  const clapFilled = (<ClapFilled handleClapClick={handleClapClick} id={id} />)
-  const clapUnfilled = (<ClapUnfilled handleClapClick={handleClapClick} id={id} />)
+export default function Article({id, name, claps, bookmark, handleClapClick, handleBookmarkClick, handleStarClick, handleFollowClick, didClap, user}) {
+
+  const bookmarkFilled = (<BookmarkFilled 
+    className={classes.Bookmark} 
+    key={id} 
+    bookmarkClick={handleBookmarkClick} 
+    id={id} 
+  />)
+  const bookmarkUnfilled = (<BookmarkUnfilled 
+    className={classes.Bookmark} 
+    key={id} 
+    bookmarkClick={handleBookmarkClick} 
+    id={id} 
+  />)
+  const clapFilled = (<ClapFilled 
+    className={classes.ClapsIcon} 
+    handleClapClick={handleClapClick} 
+    id={id} 
+  />)
+  const clapUnfilled = (<ClapUnfilled 
+    className={classes.ClapsIcon} 
+    handleClapClick={handleClapClick} 
+    id={id} 
+  />)
 
   return(
-    <div key={id}>
-      <img src={myImage} alt={name} />
-      <h3>{name}</h3>
-      {didClap ? clapFilled : clapUnfilled}
-      <div>{claps}</div>
-      <span className={classes.separator}></span>
-      {bookmark ? bookmarkFilled : bookmarkUnfilled}
+    <div key={id} className={classes.ArticleImageContainer}>
+      <img src={myImage} alt={name} className={classes.Image} />
+      <h3 className={classes.Title}>{name}</h3>
+      <div className={classes.UserLikesContainer}>
+        <div className={classes.likesContainer + ' ' + classes.LikesItem}>
+          {didClap ? clapFilled : clapUnfilled}
+          <div className={classes.ClapsNumber}>{claps}</div>
+          <span className={classes.Separator}></span>
+          {bookmark ? bookmarkFilled : bookmarkUnfilled}
+        </div>
+        <User
+        className={classes.UserItem}
+          key={user.id}
+          id={user.id}
+          name={user.name}
+          date={user.date}
+          readingTime={user.readingTime}
+          isStarred={user.isStarred}
+          calledFromArticle={true}
+          image={user.image}
+          handleFollowClick={handleFollowClick}
+          handleStarClick={handleStarClick}
+        />
       </div>
+    </div>
   )
 }
 

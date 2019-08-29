@@ -71,7 +71,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        {this.state.users.map(u => {
+        {/* {this.state.users.map(u => {
           return (
             <User 
               key={u.id}
@@ -86,8 +86,8 @@ export default class App extends React.Component {
               handleStarClick={this.clickStarHandler}
             />
           )
-        })}
-        {this.state.articles.map(a => {
+        })} */}
+        {this.state.articles.map((a, i) => {
           return(
             <Article 
               key={a.id}
@@ -96,8 +96,11 @@ export default class App extends React.Component {
               claps={a.claps}
               didClap={a.didClap}
               bookmark={a.bookmark}
+              user={this.state.users[i]}
               handleClapClick={this.clickClapHandler}
               handleBookmarkClick={this.clickBookmarkHandler}
+              handleFollowClick={this.clickFollowHandler}
+              handleStarClick={this.clickStarHandler}
             />
           )
         })}
