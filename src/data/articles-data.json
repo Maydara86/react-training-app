@@ -4,69 +4,79 @@
       "articleName": "amet aliqua cupidatat dolore Lorem elit voluptate proident tempor incididunt",
       "claps": 46,
       "bookmark": true,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae9445543ffea5167d5e",
       "articleName": "exercitation in ut do non anim elit laboris sunt eiusmod",
       "claps": 70,
       "bookmark": false,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae942d8d5a7a958368bf",
       "articleName": "irure mollit incididunt amet veniam aute ullamco anim et Lorem",
       "claps": 32,
       "bookmark": true,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae94c25c806ad478b2ab",
       "articleName": "magna eiusmod cupidatat nisi excepteur esse non fugiat labore consectetur",
       "claps": 88,
       "bookmark": false,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae9402bd43652dfcbb6e",
       "articleName": "do exercitation proident sunt eu aute est dolor sit occaecat",
       "claps": 71,
       "bookmark": false,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae942ee16a15289006fa",
       "articleName": "aliquip ea enim voluptate aliqua enim labore pariatur occaecat officia",
       "claps": 28,
       "bookmark": true,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae9471c77f7d7c16718e",
       "articleName": "nisi excepteur eiusmod Lorem id in nisi tempor ex anim",
       "claps": 60,
       "bookmark": true,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae94c3559988c5e24a02",
       "articleName": "elit aute duis amet aliquip nostrud in consequat velit et",
       "claps": 81,
       "bookmark": false,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae941833f8a9d3c512c8",
       "articleName": "amet minim minim veniam ad adipisicing nulla quis voluptate amet",
       "claps": 39,
       "bookmark": true,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     },
     {
       "id": "5d66ae94a1b34ddf6249668b",
       "articleName": "laboris incididunt fugiat occaecat excepteur Lorem Lorem exercitation deserunt esse",
       "claps": 44,
       "bookmark": false,
-      "articleImage": "http://placehold.it/32x32"
+      "articleImage": "http://placehold.it/32x32",
+      "didClap": false
     }
   ]

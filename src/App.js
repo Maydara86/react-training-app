@@ -48,6 +48,7 @@ export default class App extends React.Component {
       const updatedArticles = prevState.articles.map(a => {
         if(a.id === id) {
           a.claps++
+          a.didClap = true
         }
         return a
       })
@@ -93,6 +94,7 @@ export default class App extends React.Component {
               id={a.id}
               name={a.articleName}
               claps={a.claps}
+              didClap={a.didClap}
               bookmark={a.bookmark}
               handleClapClick={this.clickClapHandler}
               handleBookmarkClick={this.clickBookmarkHandler}

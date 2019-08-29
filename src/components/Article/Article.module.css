@@ -7,6 +7,12 @@
     fill: black;
 }
 
-/* .clap {
-    color: red;
-} */
+.clap {
+    fill: grey;
+    cursor: pointer;
+}
+
+.clap:hover {
+    fill: black;
+}
+
