@@ -1,0 +1,12 @@
+.bookmark {
+    fill: grey;
+    cursor: pointer;
+}
+
+.bookmark:hover {
+    fill: black;
+}
+
+/* .clap {
+    color: red;
+} */

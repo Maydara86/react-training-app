@@ -1,14 +1,18 @@
 import React from 'react'
 import './App.css'
 import data from './data/users-data.json'
+import articlesData from './data/articles-data.json'
+import Article from './components/Article/Article'
 import User from './components/User/User'
 
 export default class App extends React.Component {
   constructor() {
     super()
-    this.state = {users: data}
+    this.state = {users: data, articles: articlesData}
     this.clickFollowHandler = this.clickFollowHandler.bind(this)
     this.clickStarHandler = this.clickStarHandler.bind(this)
+    this.clickClapHandler = this.clickClapHandler.bind(this)
+    this.clickBookmarkHandler = this.clickBookmarkHandler.bind(this)
   }
 
   clickFollowHandler(id) {
@@ -39,6 +43,30 @@ export default class App extends React.Component {
     })
   }
 
+  clickClapHandler(id) {
+    this.setState(prevState => {
+      const updatedArticles = prevState.articles.map(a => {
+        if(a.id === id) {
+          a.claps++
+        }
+        return a
+      })
+      return {articles: updatedArticles}
+    })
+  }
+
+  clickBookmarkHandler(id) {
+    this.setState(prevState => {
+      const updatedArticles = prevState.articles.map(a => {
+        if(a.id === id) {
+        a.bookmark = !a.bookmark
+      }
+        return a
+      })
+      return {articles: updatedArticles}
+    })
+  }
+
   render() {
     return (
       <div>
@@ -55,6 +83,19 @@ export default class App extends React.Component {
               image={u.image}
               handleFollowClick={this.clickFollowHandler}
               handleStarClick={this.clickStarHandler}
+            />
+          )
+        })}
+        {this.state.articles.map(a => {
+          return(
+            <Article 
+              key={a.id}
+              id={a.id}
+              name={a.articleName}
+              claps={a.claps}
+              bookmark={a.bookmark}
+              handleClapClick={this.clickClapHandler}
+              handleBookmarkClick={this.clickBookmarkHandler}
             />
           )
         })}
