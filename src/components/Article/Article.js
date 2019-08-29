@@ -15,6 +15,7 @@ export default function Article({id, name, claps, bookmark, handleClapClick, han
       <h3>{name}</h3>
       {didClap ? clapFilled : clapUnfilled}
       <div>{claps}</div>
+      <span className={classes.separator}></span>
       {bookmark ? bookmarkFilled : bookmarkUnfilled}
       </div>
   )
