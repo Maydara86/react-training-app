@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './User.module.css';
+import C from './User.module.css';
 import myImage from '../../assets/images/avatar.png';
 import PropTypes from 'prop-types';
 
@@ -7,20 +7,20 @@ const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handle
   
   let starColor = isStarred === 'active' ? 'gold' : 'grey'
     return(
-      <div className={classes.container} key={id}>
-        <img className={classes.imageContainer} src={myImage} alt={name} />
-        <div className={classes.contentContainer}>
-          <div className={classes.contentContainerRow1}>
-            <div className={classes.name}>{name}</div>
-            {!calledFromArticle && <button onClick={() => handleFollowClick(id)}>
+      <div className={C.UserContainer} key={id}>
+        <img className={C.UserImageItem} src={myImage} alt={name} />
+        <div className={C.UserInfoItem}>
+          <div className={C.ContentContainerRow1}>
+            <div className={C.NameItem}>{name}</div>
+            {!calledFromArticle && <button className={C.FollowItem} onClick={() => handleFollowClick(id)}>
               {isFollowed === 'active' ? 'Unfollow' : 'Follow'}
             </button>}
           </div>
-          <div className={classes.contentContainerRow2}>
-            <div className={classes.date}>{date}</div>
+          <div className={C.ContentContainerRow2}>
+            <div className={C.DateItem}>{date}</div>
             <span>·</span>
-            <div className={classes.time}>{readingTime} min read</div>
-            <Icon color={starColor} handleStarClick={handleStarClick} id={id} />
+            <div className={C.ReadingTimeItem}>{readingTime} min read</div>
+            <Icon className={C.StarItem} color={starColor} handleStarClick={handleStarClick} id={id} />
           </div>
         </div>
       </div>

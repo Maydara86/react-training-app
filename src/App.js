@@ -71,7 +71,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        {/* {this.state.users.map(u => {
+        {this.state.users.map(u => {
           return (
             <User 
               key={u.id}
@@ -86,7 +86,7 @@ export default class App extends React.Component {
               handleStarClick={this.clickStarHandler}
             />
           )
-        })} */}
+        })}
         {this.state.articles.map((a, i) => {
           return(
             <Article 
