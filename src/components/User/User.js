@@ -7,10 +7,10 @@ const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handle
   
   let starColor = isStarred === 'active' ? 'gold' : 'grey'
     return(
-      <div className={C.UserContainer} key={id}>
-        <img className={C.UserImageItem} src={myImage} alt={name} />
-        <div className={C.UserInfoItem}>
-          <div className={C.ContentContainerRow1}>
+      <div className={calledFromArticle ? C.SmallUserContainer : C.UserContainer} key={id}>
+        <img className={calledFromArticle ? C.SmallUserImageItem : C.UserImageItem} src={myImage} alt={name} />
+        <div className={calledFromArticle ? C.SmallUserInfoItem : C.UserInfoItem}>
+          <div className={calledFromArticle ? C.SmallContentContainerRow1 : C.ContentContainerRow1}>
             <div className={C.NameItem}>{name}</div>
             {!calledFromArticle && <button className={C.FollowItem} onClick={() => handleFollowClick(id)}>
               {isFollowed === 'active' ? 'Unfollow' : 'Follow'}

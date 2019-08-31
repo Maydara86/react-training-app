@@ -1,100 +1,81 @@
-/* .container {
-  margin: 5px;
-  padding: 5px;
-  height: 100px;
-  width: 300px;
+/* ############ SMALL USER CONTAINER ########### */
+
+
+.SmallUserContainer {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
-  align-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  height: 70px;
+  width: 320px;
+  }
+
+.SmallUserImageItem:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
 }
 
-.contentContainer {
-  display: flex;
-  flex-flow: column wrap;
+.SmallUserInfoItem:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
   font-size: 16px;
   font-weight: 300;
-  padding-top: 10px;
 }
 
-.contentContainerRow1 {
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
-  align-items: flex-end;
-  height: 31px;
-  line-height: 20px;
-}
 
-.contentContainerRow2 {
+
+.SmallContentContainerRow1 {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  flex-flow: row wrap;
-  height: 50%;
-  color: rgba(0, 0, 0, 0.54);
-  line-height: 30px;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  margin-top: 7px;
 }
 
-.imageContainer {
-  margin: 5px;
-  padding: 5px;
-  display: flex;
-  border-radius: 100%;
-  align-self: center;
-  flex: 0 1 30px;
-  height: 70px;
-}
 
-.contentContainerRow1 > button {
-  margin: 0 5px 0 5px;
-  flex: 0 1 20px;
-  flex-flow: column wrap;
-  height: 60%;
-  order: 1;
-  border-color: rgba(0, 0, 0, 0.54);
-  font-size: 15px;
-  text-decoration: none;
-  display: inline-block;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 4px;
-  background: 0;
-  letter-spacing: 0px;
-  font-style: normal;
-  color: rgba(0, 0, 0, 0.84);
-  fill: rgba(0, 0, 0, 0.84);
-  box-sizing: border-box;
-  font-weight: 400;
-  overflow: visible;
-  font: 400 13.3333px Arial;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  transition: border-color 0.5s, color 0.5s, fill 0.5s
-}
-
-.contentContainerRow1 > button:hover {
-  border-color: rgba(0, 0, 0);
-  color: rgba(0, 0, 0);
-  fill: rgba(0, 0, 0);
-}
-
-.name {
-  margin: 0 5px 0 5px;
-}
-
-.date {
-  margin: 0 5px 0 5px;
-  height: 100%;
-  align-self: flex-end;
-  color: grey;
-}
-
-.time {
-  margin: 0 5px 0 5px;
-  height: 100%;
-  align-self: flex-end;
-  color: grey;
-} */
+/* ################## BIG USER CONTAINER ################ */
 
 
 .UserContainer {
@@ -147,7 +128,6 @@
   align-self: auto;
   font-size: 16px;
   font-weight: 300;
-  /* ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ */
 }
 
 
@@ -168,8 +148,6 @@
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
-  /* height: 31px; */
-  /* line-height: 20px; */
   margin-top: 20px;
 }
 
@@ -267,7 +245,6 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  /* margin: 0 10px 0 10px; */
 }
 
 .StarItem:nth-child(3) {
@@ -280,7 +257,6 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  /* margin: 0 5px 0 5px; */
 }
 
 span {
