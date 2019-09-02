@@ -1,5 +1,5 @@
 import React from 'react';
-import C from './User.module.css';
+import styles from './User.module.css';
 import myImage from '../../assets/images/avatar.png';
 import PropTypes from 'prop-types';
 
@@ -7,20 +7,20 @@ const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handle
   
   let starColor = isStarred === 'active' ? 'gold' : 'grey'
     return(
-      <div className={calledFromArticle ? C.SmallUserContainer : C.UserContainer} key={id}>
-        <img className={calledFromArticle ? C.SmallUserImageItem : C.UserImageItem} src={myImage} alt={name} />
-        <div className={calledFromArticle ? C.SmallUserInfoItem : C.UserInfoItem}>
-          <div className={calledFromArticle ? C.SmallContentContainerRow1 : C.ContentContainerRow1}>
-            <div className={C.NameItem}>{name}</div>
-            {!calledFromArticle && <button className={C.FollowItem} onClick={() => handleFollowClick(id)}>
+      <div className={calledFromArticle ? styles.SmallUserContainer : styles.UserContainer} key={id}>
+        <img className={calledFromArticle ? styles.SmallUserImageItem : styles.UserImageItem} src={myImage} alt={name} />
+        <div className={calledFromArticle ? styles.SmallUserInfoItem : styles.UserInfoItem}>
+          <div className={calledFromArticle ? styles.SmallContentContainerRow1 : styles.ContentContainerRow1}>
+            <div className={styles.NameItem}>{name}</div>
+            {!calledFromArticle && <button className={styles.FollowItem} onClick={() => handleFollowClick(id)}>
               {isFollowed === 'active' ? 'Unfollow' : 'Follow'}
             </button>}
           </div>
-          <div className={C.ContentContainerRow2}>
-            <div className={C.DateItem}>{date}</div>
+          <div className={styles.ContentContainerRow2}>
+            <div className={styles.DateItem}>{date}</div>
             <span>·</span>
-            <div className={C.ReadingTimeItem}>{readingTime} min read</div>
-            <Icon className={C.StarItem} color={starColor} handleStarClick={handleStarClick} id={id} />
+            <div className={styles.ReadingTimeItem}>{readingTime} min read</div>
+            <Icon className={styles.StarItem} color={starColor} handleStarClick={handleStarClick} id={id} />
           </div>
         </div>
       </div>

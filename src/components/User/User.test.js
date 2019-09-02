@@ -18,14 +18,7 @@ const user = {
 it('renders correctly when there is one user', () => {
 
   const tree = renderer.create(<User 
-    key={user.id}
-    id={user.id}
-    name={user.name}
-    date={user.date}
-    readingTime={user.readingTime}
-    isStarred={user.isStarred}
-    isFollowed='idle'
-    image={user.image}
+    {...user}
     handleFollowClick={() => 'test'}
     handleStarClick={() => {}}
   />).toJSON();
@@ -38,14 +31,7 @@ it('when the follow button is clicked a callback is executed', () => {
   const mockFollowClick = jest.fn();
 
   const tree = renderer.create(<User 
-    key={user.id}
-    id={user.id}
-    name={user.name}
-    date={user.date}
-    readingTime={user.readingTime}
-    isStarred={user.isStarred}
-    isFollowed={user.isFollowed}
-    image={user.image}
+    {...user}
     handleFollowClick={mockFollowClick}
     handleStarClick={() => {}}
   />)
@@ -57,19 +43,14 @@ it('when the follow button is clicked a callback is executed', () => {
 
 
 
-it('Change the style of the star svg depending on the', () => {
+it('renders the right color depending on the `isStarred`', () => {
   const mockFollowClick = jest.fn();
   const mockStarClick = jest.fn();
 
   const testRenderer = TestRenderer.create(<User 
-    key={user.id}
-    id={user.id}
-    name={user.name}
-    date={user.date}
-    readingTime={user.readingTime}
+    {...user}
     isStarred='active'
-    isFollowed={user.isFollowed}
-    image={user.image}
+    isFollowed='idle'
     handleFollowClick={mockFollowClick}
     handleStarClick={mockStarClick}
   />)
@@ -78,7 +59,7 @@ it('Change the style of the star svg depending on the', () => {
   expect(testInstance.findByType(Icon).props.color).toBe('gold')
 })
 
-it('Simulate a click on the svg star', () => {
+it('when user clicks on the star icon', () => {
   const mockStarClick = jest.fn();
   const testRenderer = TestRenderer.create(<Icon 
     color='grey' 
@@ -89,6 +70,15 @@ it('Simulate a click on the svg star', () => {
   const testInstance = testRenderer.root
   let svg = testInstance.findByType('svg')
   svg.props.onClick()
-  // expect(testInstance.props.color).toBe('gold')
   expect(mockStarClick).toHaveBeenCalledWith('5d552d0058f193f2795fc814')
+})
+
+it('checks if the User is called from an article', () => {
+  const tree = renderer.create(<User 
+    {...user}
+    calledFromArticle={true}
+    handleFollowClick={() => {}}
+    handleStarClick={() => {}}
+  />)
+  expect(tree).toMatchSnapshot();  
 })
