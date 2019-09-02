@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handleStarClick, readingTime, calledFromArticle }) => {
   
-  let starColor = isStarred === 'active' ? 'gold' : 'grey'
+  const starColor = isStarred ? 'gold' : 'grey'
     return(
       <div className={calledFromArticle ? styles.SmallUserContainer : styles.UserContainer} key={id}>
         <img className={calledFromArticle ? styles.SmallUserImageItem : styles.UserImageItem} src={myImage} alt={name} />
@@ -13,7 +13,7 @@ const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handle
           <div className={calledFromArticle ? styles.SmallContentContainerRow1 : styles.ContentContainerRow1}>
             <div className={styles.NameItem}>{name}</div>
             {!calledFromArticle && <button className={styles.FollowItem} onClick={() => handleFollowClick(id)}>
-              {isFollowed === 'active' ? 'Unfollow' : 'Follow'}
+              {isFollowed ? 'Unfollow' : 'Follow'}
             </button>}
           </div>
           <div className={styles.ContentContainerRow2}>

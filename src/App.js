@@ -19,7 +19,7 @@ export default class App extends React.Component {
     this.setState(prevState => {
         const updatedUsers = prevState.users.map(user => {
             if (user.id === id) {
-              user.isFollowed === 'active' ? user.isFollowed = 'idle' : user.isFollowed = 'active'
+              user.isFollowed = !user.isFollowed
             }
             return user
         })
@@ -33,7 +33,7 @@ export default class App extends React.Component {
     this.setState(prevState => {
         const updatedUsers = prevState.users.map(user => {
             if (user.id === id) {
-              user.isStarred === 'active' ? user.isStarred = 'idle' : user.isStarred = 'active'
+              user.isStarred = !user.isStarred
             }
             return user
         })
@@ -71,31 +71,21 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        {this.state.users.map(u => {
+        {this.state.users.map(user => {
           return (
             <User 
-              key={u.id}
-              id={u.id}
-              name={u.name}
-              date={u.date}
-              readingTime={u.readingTime}
-              isStarred={u.isStarred}
-              isFollowed={u.isFollowed}
-              image={u.image}
+              {...user}
+              key={user.id}
               handleFollowClick={this.clickFollowHandler}
               handleStarClick={this.clickStarHandler}
             />
           )
         })}
-        {this.state.articles.map((a, i) => {
+        {this.state.articles.map((article, i) => {
           return(
             <Article 
-              key={a.id}
-              id={a.id}
-              name={a.articleName}
-              claps={a.claps}
-              didClap={a.didClap}
-              bookmark={a.bookmark}
+              key={article.id}
+              {...article}
               user={this.state.users[i]}
               handleClapClick={this.clickClapHandler}
               handleBookmarkClick={this.clickBookmarkHandler}

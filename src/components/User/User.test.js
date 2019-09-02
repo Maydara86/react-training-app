@@ -25,8 +25,6 @@ it('renders correctly when there is one user', () => {
   expect(tree).toMatchSnapshot();
 });
 
-
-
 it('when the follow button is clicked a callback is executed', () => {
   const mockFollowClick = jest.fn();
 
@@ -41,22 +39,20 @@ it('when the follow button is clicked a callback is executed', () => {
   expect(mockFollowClick).toHaveBeenCalledWith('5d552d0058f193f2795fc814');  
 })
 
-
-
 it('renders the right color depending on the `isStarred`', () => {
   const mockFollowClick = jest.fn();
   const mockStarClick = jest.fn();
 
   const testRenderer = TestRenderer.create(<User 
     {...user}
-    isStarred='active'
-    isFollowed='idle'
+    isStarred={false}
+    isFollowed={false}
     handleFollowClick={mockFollowClick}
     handleStarClick={mockStarClick}
   />)
 
   const testInstance = testRenderer.root
-  expect(testInstance.findByType(Icon).props.color).toBe('gold')
+  expect(testInstance.findByType(Icon).props.color).toBe('grey')
 })
 
 it('when user clicks on the star icon', () => {
