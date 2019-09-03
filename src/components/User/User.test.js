@@ -23,8 +23,8 @@ it('renders correctly when there is one user', () => {
     name={user.name}
     date={user.date}
     readingTime={user.readingTime}
-    isStarred={user.isStarred}
-    isFollowed='idle'
+    isStarred={false}
+    isFollowed={false}
     image={user.image}
     handleFollowClick={() => 'test'}
     handleStarClick={() => {}}
@@ -67,8 +67,8 @@ it('Change the style of the star svg depending on the', () => {
     name={user.name}
     date={user.date}
     readingTime={user.readingTime}
-    isStarred='active'
-    isFollowed={user.isFollowed}
+    isStarred={true}
+    isFollowed={true}
     image={user.image}
     handleFollowClick={mockFollowClick}
     handleStarClick={mockStarClick}

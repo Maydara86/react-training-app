@@ -51,7 +51,7 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
           style={
             Object {
               "cursor": "pointer",
-              "fill": "grey",
+              "fill": "gold",
               "height": 15,
               "marginTop": 4,
               "padding": 4,
@@ -89,7 +89,7 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
         <button
           onClick={[Function]}
         >
-          Follow
+          Unfollow
         </button>
       </div>
       <div

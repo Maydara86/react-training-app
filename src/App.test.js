@@ -20,23 +20,23 @@ describe('App Component', () => {
     })
   })
 
-  it('testing clickFollowHandler method on the state\'s first user', () => {
+  it('testing clickFollowHandler method to have the expected effect on the state of the first user', () => {
     wrapper.clickFollowHandler('5d552d0058f193f2795fc814')
-    expect(wrapper.state.users[0].isFollowed).toMatch('idle')
+    expect(wrapper.state.users[0].isFollowed).toBeFalsy()
   })
 
-  it('testing clickFollowHandler on the state\'s second user', () => {
+  it('clickFollowHandler method have the expected effect on the state of the second user', () => {
     wrapper.clickFollowHandler('5d552d00b20b141dff10d2a2')
-    expect(wrapper.state.users[1].isFollowed).toMatch('active')
+    expect(wrapper.state.users[1].isFollowed).toBeFalsy()
   })
 
   it('Testing clickStarHandler method to have the expected effect on the state of the first user', () => {
     wrapper.clickStarHandler('5d552d0058f193f2795fc814')
-    expect(wrapper.state.users[0].isStarred).toEqual('active')
+    expect(wrapper.state.users[0].isStarred).toBeFalsy()
   })
 
-  it('calling the clickStarHandler method from App Component has the expected effect on the state of the second user', () => {
+  it('calling the clickStarHandler method has the expected effect on the state of the second user', () => {
     wrapper.clickStarHandler('5d552d00b20b141dff10d2a2')
-    expect(wrapper.state.users[1].isStarred).toEqual('idle')
+    expect(wrapper.state.users[1].isStarred).toBeFalsy()
   })
 })
