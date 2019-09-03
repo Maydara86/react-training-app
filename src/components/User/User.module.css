@@ -1,0 +1,110 @@
+.container {
+  /* border: 2px solid #000; */
+  margin: 5px;
+  padding: 5px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: center;
+}
+
+.contentContainer {
+  display: flex;
+  /* border: 2px solid yellow; */
+  flex-flow: column wrap;
+  font-size: 16px;
+  font-weight: 300;
+  padding-top: 10px;
+}
+
+.contentContainerRow1 {
+  /* border: 2px solid blue; */
+  /* margin: 5px; */
+  /* padding: 5px;  */
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  height: 31px;
+  line-height: 20px;
+}
+
+.contentContainerRow2 {
+  /* border: 2px solid violet; */
+  /* margin: 5px;
+  padding: 5px; */
+  display: flex;
+  flex-wrap: nowrap;
+  flex-flow: row wrap;
+  height: 50%;
+  color: rgba(0, 0, 0, 0.54);
+  line-height: 30px;
+}
+
+.imageContainer {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  border-radius: 100%;
+  /* border: 1px solid red; */
+  align-self: center;
+  flex: 0 1 30px;
+  height: 70px;
+  /* width: 60px; */
+}
+
+.contentContainerRow1 > button {
+  margin: 0 5px 0 5px;
+  flex: 0 1 20px;
+  flex-flow: column wrap;
+  height: 60%;
+  order: 1;
+  border-color: rgba(0, 0, 0, 0.54);
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  background: 0;
+  letter-spacing: 0px;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.84);
+  fill: rgba(0, 0, 0, 0.84);
+  box-sizing: border-box;
+  font-weight: 400;
+  overflow: visible;
+  font: 400 13.3333px Arial;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: border-color 0.5s, color 0.5s, fill 0.5s
+}
+
+.contentContainerRow1 > button:hover {
+  border-color: rgba(0, 0, 0);
+  color: rgba(0, 0, 0);
+  fill: rgba(0, 0, 0);
+}
+
+.name {
+  margin: 0 5px 0 5px;
+  /* color: grey; */
+  /* height: 50%; */
+}
+
+.date {
+  margin: 0 5px 0 5px;
+  height: 100%;
+  align-self: flex-end;
+  color: grey;
+  /* justify-content: flex-start; */
+}
+
+.time {
+  margin: 0 5px 0 5px;
+  height: 100%;
+  align-self: flex-end;
+  color: grey;
+  /* justify-content: flex-start; */
+}

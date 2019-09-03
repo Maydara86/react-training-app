@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there is one user 1`] = `
+<div
+  className="container"
+>
+  <img
+    alt="Walton Morton"
+    className="imageContainer"
+    src="avatar.png"
+  />
+  <div
+    className="contentContainer"
+  >
+    <div
+      className="contentContainerRow1"
+    >
+      <div
+        className="name"
+      >
+        Walton Morton
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        Follow
+      </button>
+    </div>
+    <div
+      className="contentContainerRow2"
+    >
+      <div
+        className="date"
+      >
+        Aug 9
+      </div>
+      <span>
+        ·
+      </span>
+      <div
+        className="time"
+      >
+        20
+         min read
+      </div>
+      <svg
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "fill": "grey",
+            "height": 15,
+            "marginTop": 4,
+            "padding": 4,
+            "width": 15,
+          }
+        }
+        viewBox="0 0 15 15"
+      >
+        <path
+          d="M7.44 2.32c.03-.1.09-.1.12 0l1.2 3.53a.29.29 0 00.26.2h3.88c.11 0 .13.04.04.1L9.8 8.33a.27.27 0 00-.1.29l1.2 3.53c.03.1-.01.13-.1.07l-3.14-2.18a.3.3 0 00-.32 0L4.2 12.22c-.1.06-.14.03-.1-.07l1.2-3.53a.27.27 0 00-.1-.3L2.06 6.16c-.1-.06-.07-.12.03-.12h3.89a.29.29 0 00.26-.19l1.2-3.52z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

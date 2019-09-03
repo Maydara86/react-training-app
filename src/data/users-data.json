@@ -1,0 +1,92 @@
+[
+    {
+      "id": "5d552d0058f193f2795fc814",
+      "isFollowed": true,
+      "isStarred": false,
+      "image": "./assets/images/avata.png",
+      "readingTime": 20,
+      "name": "Walton Morton",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d00b20b141dff10d2a2",
+      "isFollowed": false,
+      "isStarred": true,
+      "image": "./assets/images/avata.png",
+      "readingTime": 3,
+      "name": "Joy Dennis",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d006840b582f6eb01ad",
+      "isFollowed": false,
+      "isStarred": false,
+      "image": "./assets/images/avata.png",
+      "readingTime": 14,
+      "name": "Frances Smith",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d00f2bec48f5a14f086",
+      "isFollowed": true,
+      "isStarred": true,
+      "image": "./assets/images/avata.png",
+      "readingTime": 9,
+      "name": "Erma Kirby",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d00d3198ce156a01f11",
+      "isFollowed": false,
+      "isStarred": true,
+      "image": "./assets/images/avata.png",
+      "readingTime": 3,
+      "name": "Burgess Webb",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d001329adcba07ffe74",
+      "isFollowed": false,
+      "isStarred": false,
+      "image": "./assets/images/avata.png",
+      "readingTime": 15,
+      "name": "Britney Stephenson",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d00ab6a37224d329fd0",
+      "isFollowed": false,
+      "isStarred": false,
+      "image": "./assets/images/avata.png",
+      "readingTime": 6,
+      "name": "Kristi Fitzgerald",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d00e4fa9a6d69567d46",
+      "isFollowed": false,
+      "isStarred": true,
+      "image": "./assets/images/avata.png",
+      "readingTime": 7,
+      "name": "Ines Dalton",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d00b3174cabfa32d3bf",
+      "isFollowed": true,
+      "isStarred": false,
+      "image": "./assets/images/avata.png",
+      "readingTime": 9,
+      "name": "Terra Hoffman",
+      "date": "Aug 9"
+    },
+    {
+      "id": "5d552d0067165d459c75f95b",
+      "isFollowed": true,
+      "isStarred": false,
+      "image": "./assets/images/avata.png",
+      "readingTime": 8,
+      "name": "Mccall Yang",
+      "date": "Aug 9"
+    }
+  ]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "5d552d0058f193f2795fc814",
+    "isFollowed": "active",
+    "isStarred": "idle",
+    "image": "./assets/images/avata.png",
+    "readingTime": 20,
+    "name": "Walton Morton",
+    "date": "Aug 9"
+  },
+  {
+    "id": "5d552d00b20b141dff10d2a2",
+    "isFollowed": "idle",
+    "isStarred": "active",
+    "image": "./assets/images/avata.png",
+    "readingTime": 3,
+    "name": "Joy Dennis",
+    "date": "Aug 9"
+  }
+]
