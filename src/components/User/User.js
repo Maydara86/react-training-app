@@ -3,16 +3,16 @@ import styles from './User.module.css';
 import myImage from '../../assets/images/avatar.png';
 import PropTypes from 'prop-types';
 
-const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handleStarClick, readingTime, calledFromArticle }) => {
+const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handleStarClick, readingTime, useSimplifiedLayout }) => {
   
   const starColor = isStarred ? 'gold' : 'grey'
     return(
-      <div className={calledFromArticle ? styles.SmallUserContainer : styles.UserContainer} key={id}>
-        <img className={calledFromArticle ? styles.SmallUserImageItem : styles.UserImageItem} src={myImage} alt={name} />
-        <div className={calledFromArticle ? styles.SmallUserInfoItem : styles.UserInfoItem}>
-          <div className={calledFromArticle ? styles.SmallContentContainerRow1 : styles.ContentContainerRow1}>
+      <div className={useSimplifiedLayout ? styles.SmallUserContainer : styles.UserContainer} key={id}>
+        <img className={useSimplifiedLayout ? styles.SmallUserImageItem : styles.UserImageItem} src={myImage} alt={name} />
+        <div className={useSimplifiedLayout ? styles.SmallUserInfoItem : styles.UserInfoItem}>
+          <div className={useSimplifiedLayout ? styles.SmallContentContainerRow1 : styles.ContentContainerRow1}>
             <div className={styles.NameItem}>{name}</div>
-            {!calledFromArticle && <button className={styles.FollowItem} onClick={() => handleFollowClick(id)}>
+            {!useSimplifiedLayout && <button className={styles.FollowItem} onClick={() => handleFollowClick(id)}>
               {isFollowed ? 'Unfollow' : 'Follow'}
             </button>}
           </div>

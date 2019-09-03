@@ -38,7 +38,7 @@ export default function Article({id, name, claps, bookmark, handleClapClick, han
           <User
           className={styles.AuthorItem}
             {...user}
-            calledFromArticle={true}
+            useSimplifiedLayout={true}
             handleFollowClick={handleFollowClick}
             handleStarClick={handleStarClick}
           />
