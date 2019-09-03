@@ -1,7 +1,7 @@
 /* ############ SMALL USER CONTAINER ########### */
 
 
-.SmallUserContainer {
+.smallUserContainer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -24,7 +24,7 @@
   width: 320px;
   }
 
-.SmallUserImageItem:nth-child(1) {
+.smallUserImageItem:nth-child(1) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -39,7 +39,7 @@
   width: 60px;
 }
 
-.SmallUserInfoItem:nth-child(2) {
+.smallUserInfoItem:nth-child(2) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -55,7 +55,7 @@
 
 
 
-.SmallContentContainerRow1 {
+.smallContentContainerRow1 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -78,7 +78,7 @@
 /* ################## BIG USER CONTAINER ################ */
 
 
-.UserContainer {
+.userContainer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -101,7 +101,7 @@
   width: 320px;
   }
 
-.UserImageItem:nth-child(1) {
+.userImageItem:nth-child(1) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -116,7 +116,7 @@
   width: 90px;
 }
 
-.UserInfoItem:nth-child(2) {
+.userInfoItem:nth-child(2) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -132,7 +132,7 @@
 
 
 
-.ContentContainerRow1 {
+.contentContainerRow1 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -151,7 +151,7 @@
   margin-top: 20px;
 }
 
-.NameItem:nth-child(1) {
+.nameItem:nth-child(1) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -164,7 +164,7 @@
   margin: 0 5px 0 5px;
 }
 
-.FollowItem:nth-child(2) {
+.followItem:nth-child(2) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -195,14 +195,14 @@
   transition: border-color 0.5s, color 0.5s, fill 0.5s
 }
 
-.FollowItem:hover {
+.followItem:hover {
   border-color: rgba(0, 0, 0);
   color: rgba(0, 0, 0);
   fill: rgba(0, 0, 0);
 }
 
 
-.ContentContainerRow2 {
+.contentContainerRow2 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -222,7 +222,7 @@
   line-height: 30px;
 }
 
-.DateItem:nth-child(1) {
+.dateItem:nth-child(1) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -235,7 +235,7 @@
   margin: 0 0 0 5px;
 }
 
-.ReadingTimeItem:nth-child(2) {
+.readingTimeItem:nth-child(2) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -247,7 +247,7 @@
   align-self: auto;
 }
 
-.StarItem:nth-child(3) {
+.starItem:nth-child(3) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;

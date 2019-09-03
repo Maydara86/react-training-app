@@ -7,45 +7,45 @@ import User from '../User/User'
 export default function Article({id, name, claps, bookmark, handleClapClick, handleBookmarkClick, handleStarClick, handleFollowClick, didClap, user}) {
 
   const bookmarkFilled = (<BookmarkFilled 
-    className={styles.BookmarkIconItem} 
+    className={styles.bookmarkIconItem} 
     key={id} 
     bookmarkClick={handleBookmarkClick} 
     id={id} 
   />)
   const bookmarkUnfilled = (<BookmarkUnfilled 
-    className={styles.BookmarkIconItem} 
+    className={styles.bookmarkIconItem} 
     key={id} 
     bookmarkClick={handleBookmarkClick} 
     id={id} 
   />)
   const clapFilled = (<ClapFilled 
-    className={styles.ClapsIconItem} 
+    className={styles.clapsIconItem} 
     handleClapClick={handleClapClick} 
     id={id} 
   />)
   const clapUnfilled = (<ClapUnfilled 
-    className={styles.ClapsIconItem} 
+    className={styles.clapsIconItem} 
     handleClapClick={handleClapClick} 
     id={id} 
   />)
 
   return(
-    <div key={id} className={styles.ArticleContainer}>
-      <img src={myImage} alt={name} className={styles.ArticleImageItem} />
-      <h3 className={styles.ArticleTitleItem}>{name}</h3>
-      <div className={styles.AuthorAndLikesItem}>
-        <div className={styles.AuthorAndLikesContainer}>
+    <div key={id} className={styles.articleContainer}>
+      <img src={myImage} alt={name} className={styles.articleImageItem} />
+      <h3 className={styles.articleTitleItem}>{name}</h3>
+      <div className={styles.authorAndLikesItem}>
+        <div className={styles.authorAndLikesContainer}>
           <User
-          className={styles.AuthorItem}
+          className={styles.authorItem}
             {...user}
             useSimplifiedLayout={true}
             handleFollowClick={handleFollowClick}
             handleStarClick={handleStarClick}
           />
-          <div className={styles.LikesItem + ' ' + styles.LikesContainer}>
+          <div className={styles.likesItem + ' ' + styles.likesContainer}>
             {didClap ? clapFilled : clapUnfilled}
-            <div className={styles.ClapsNumberItem}>{claps}</div>
-            <span className={styles.SeparatorItem}></span>
+            <div className={styles.clapsNumberItem}>{claps}</div>
+            <span className={styles.separatorItem}></span>
             {bookmark ? bookmarkFilled : bookmarkUnfilled}
           </div>
         </div>

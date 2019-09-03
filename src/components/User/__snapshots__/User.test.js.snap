@@ -2,7 +2,7 @@
 
 exports[`checks if the User is called from an article 1`] = `
 <div
-  className="SmallUserContainer"
+  className="smallUserContainer"
 >
   <img
     alt="Walton Morton"

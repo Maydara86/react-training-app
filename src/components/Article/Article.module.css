@@ -35,7 +35,7 @@ h3:hover {
 /* ############ ARTICLE CONTAINER ########## */
 
 
-.ArticleContainer {
+.articleContainer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -58,7 +58,7 @@ h3:hover {
     height: 470px;
 }
 
-.ArticleImageItem:nth-child(1) {
+.articleImageItem:nth-child(1) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -70,7 +70,7 @@ h3:hover {
     align-self: auto;
 }
 
-.ArticleTitleItem:nth-child(2) {
+.articleTitleItem:nth-child(2) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -84,7 +84,7 @@ h3:hover {
     margin-bottom: 5px;
 }
 
-.AuthorAndLikesItem:nth-child(3) {
+.authorAndLikesItem:nth-child(3) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -100,7 +100,7 @@ h3:hover {
 /* ########### AUTHOR AND LIKES CONTAINER ################ */
 
 
-.AuthorAndLikesContainer {
+.authorAndLikesContainer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -121,7 +121,7 @@ h3:hover {
     align-items: flex-start;
 }
 
-.AuthorItem:nth-child(1) {
+.authorItem:nth-child(1) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -133,7 +133,7 @@ h3:hover {
     align-self: auto;
 }
 
-.LikesItem:nth-child(2) {
+.likesItem:nth-child(2) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -150,7 +150,7 @@ h3:hover {
 /* ########### LIKES CONTAINER ############# */
 
 
-.LikesContainer {
+.likesContainer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -172,7 +172,7 @@ h3:hover {
     width: 110px;
     }
 
-.ClapsIconItem:nth-child(1) {
+.clapsIconItem:nth-child(1) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -186,11 +186,11 @@ h3:hover {
     cursor: pointer;
 }
 
-.ClapsIconItem:hover {
+.clapsIconItem:hover {
     fill: black;
 }
 
-.ClapsNumberItem:nth-child(2) {
+.clapsNumberItem:nth-child(2) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -203,7 +203,7 @@ h3:hover {
     margin: 3px 0 0 10px;
     }
 
-.SeparatorItem:nth-child(3) {
+.separatorItem:nth-child(3) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -221,7 +221,7 @@ h3:hover {
     display: block;
     }
 
-.BookmarkIconItem:nth-child(4) {
+.bookmarkIconItem:nth-child(4) {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -235,6 +235,6 @@ h3:hover {
     cursor: pointer;
 }
 
-.BookmarkIconItem:hover {
+.bookmarkIconItem:hover {
     fill: black;
 }

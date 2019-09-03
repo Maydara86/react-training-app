@@ -7,20 +7,20 @@ const User = ({ id, name, date, isFollowed, isStarred, handleFollowClick, handle
   
   const starColor = isStarred ? 'gold' : 'grey'
     return(
-      <div className={useSimplifiedLayout ? styles.SmallUserContainer : styles.UserContainer} key={id}>
-        <img className={useSimplifiedLayout ? styles.SmallUserImageItem : styles.UserImageItem} src={myImage} alt={name} />
-        <div className={useSimplifiedLayout ? styles.SmallUserInfoItem : styles.UserInfoItem}>
-          <div className={useSimplifiedLayout ? styles.SmallContentContainerRow1 : styles.ContentContainerRow1}>
-            <div className={styles.NameItem}>{name}</div>
-            {!useSimplifiedLayout && <button className={styles.FollowItem} onClick={() => handleFollowClick(id)}>
+      <div className={useSimplifiedLayout ? styles.smallUserContainer : styles.userContainer} key={id}>
+        <img className={useSimplifiedLayout ? styles.smallUserImageItem : styles.userImageItem} src={myImage} alt={name} />
+        <div className={useSimplifiedLayout ? styles.smallUserInfoItem : styles.userInfoItem}>
+          <div className={useSimplifiedLayout ? styles.smallContentContainerRow1 : styles.contentContainerRow1}>
+            <div className={styles.nameItem}>{name}</div>
+            {!useSimplifiedLayout && <button className={styles.followItem} onClick={() => handleFollowClick(id)}>
               {isFollowed ? 'Unfollow' : 'Follow'}
             </button>}
           </div>
-          <div className={styles.ContentContainerRow2}>
-            <div className={styles.DateItem}>{date}</div>
+          <div className={styles.contentContainerRow2}>
+            <div className={styles.dateItem}>{date}</div>
             <span>·</span>
-            <div className={styles.ReadingTimeItem}>{readingTime} min read</div>
-            <Icon className={styles.StarItem} color={starColor} handleStarClick={handleStarClick} id={id} />
+            <div className={styles.readingTimeItem}>{readingTime} min read</div>
+            <Icon className={styles.starItem} color={starColor} handleStarClick={handleStarClick} id={id} />
           </div>
         </div>
       </div>
