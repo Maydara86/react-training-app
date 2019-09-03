@@ -72,7 +72,7 @@ it('when user clicks on the star icon', () => {
 it('checks if the User is called from an article', () => {
   const tree = renderer.create(<User 
     {...user}
-    calledFromArticle={true}
+    useSimplifiedLayout={true}
     handleFollowClick={() => {}}
     handleStarClick={() => {}}
   />)

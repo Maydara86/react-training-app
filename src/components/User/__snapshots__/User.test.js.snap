@@ -6,26 +6,26 @@ exports[`checks if the User is called from an article 1`] = `
 >
   <img
     alt="Walton Morton"
-    className="SmallUserImageItem"
+    className="smallUserImageItem"
     src="avatar.png"
   />
   <div
-    className="SmallUserInfoItem"
+    className="smallUserInfoItem"
   >
     <div
-      className="SmallContentContainerRow1"
+      className="smallContentContainerRow1"
     >
       <div
-        className="NameItem"
+        className="nameItem"
       >
         Walton Morton
       </div>
     </div>
     <div
-      className="ContentContainerRow2"
+      className="contentContainerRow2"
     >
       <div
-        className="DateItem"
+        className="dateItem"
       >
         Aug 9
       </div>
@@ -33,7 +33,7 @@ exports[`checks if the User is called from an article 1`] = `
         ·
       </span>
       <div
-        className="ReadingTimeItem"
+        className="readingTimeItem"
       >
         20
          min read
@@ -63,36 +63,36 @@ exports[`checks if the User is called from an article 1`] = `
 
 exports[`renders correctly when there is one user 1`] = `
 <div
-  className="UserContainer"
+  className="userContainer"
 >
   <img
     alt="Walton Morton"
-    className="UserImageItem"
+    className="userImageItem"
     src="avatar.png"
   />
   <div
-    className="UserInfoItem"
+    className="userInfoItem"
   >
     <div
-      className="ContentContainerRow1"
+      className="contentContainerRow1"
     >
       <div
-        className="NameItem"
+        className="nameItem"
       >
         Walton Morton
       </div>
       <button
-        className="FollowItem"
+        className="followItem"
         onClick={[Function]}
       >
         Unfollow
       </button>
     </div>
     <div
-      className="ContentContainerRow2"
+      className="contentContainerRow2"
     >
       <div
-        className="DateItem"
+        className="dateItem"
       >
         Aug 9
       </div>
@@ -100,7 +100,7 @@ exports[`renders correctly when there is one user 1`] = `
         ·
       </span>
       <div
-        className="ReadingTimeItem"
+        className="readingTimeItem"
       >
         20
          min read
