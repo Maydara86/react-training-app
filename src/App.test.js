@@ -3,7 +3,6 @@ import { shallow } from './enzyme'
 import App from './App'
 
 jest.mock('./data/users-data.json')
-const { users } = require('./data/users-data.json')
 
 const AppComponent = shallow(<App />)
 const wrapper = AppComponent.instance()
