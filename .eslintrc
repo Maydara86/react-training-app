@@ -14,6 +14,7 @@
         "react/prop-types": ["off"],
         "no-return-assign": ["off"],
         "no-param-reassign": ["off"],
+        "import/no-named-as-default": "off",
         "react/destructuring-assignment": ["off"],
         "import/no-extraneous-dependencies": ["off"],
         "react/jsx-props-no-spreading": ["off"],

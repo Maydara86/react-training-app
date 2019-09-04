@@ -1,8 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-// import TestRenderer from 'react-test-renderer'
-// import { shallow, mount } from '../../enzyme'
-
 import User, { Icon } from './User'
 
 const user = {

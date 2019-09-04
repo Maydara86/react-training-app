@@ -1,4 +1,5 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import { shallow } from './enzyme'
 import App from './App'
 
@@ -8,6 +9,17 @@ const AppComponent = shallow(<App />)
 const wrapper = AppComponent.instance()
 
 describe('App Component', () => {
+  describe('App Snapshots', () => {
+    it('renders correctly when the `state` is empty', () => {
+      expect(AppComponent).toMatchSnapshot()
+    })
+
+    it('renders correctly when there is `state`', () => {
+      const tree = renderer.create(<App />).toJSON()
+      expect(tree).toMatchSnapshot()
+    })
+  })
+
   it('testing clickFollowHandler method to have the expected effect on the state of the first user', () => {
     wrapper.clickFollowHandler('5d552d0058f193f2795fc814')
     expect(wrapper.state.users[0].isFollowed).toBeFalsy()
