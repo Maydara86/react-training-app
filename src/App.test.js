@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {shallow, mount} from './enzyme';
-import App from './App';
+import React from 'react'
+import { shallow } from './enzyme'
+import App from './App'
 
 jest.mock('./data/users-data.json')
-let {user} = require('./data/users-data.json')
+const { users } = require('./data/users-data.json')
+
 const AppComponent = shallow(<App />)
 const wrapper = AppComponent.instance()
-
 
 describe('App Component', () => {
   it('testing clickFollowHandler method to have the expected effect on the state of the first user', () => {
