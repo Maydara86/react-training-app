@@ -52,7 +52,7 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
           style={
             Object {
               "cursor": "pointer",
-              "fill": "gold",
+              "fill": "grey",
               "height": 15,
               "marginTop": 4,
               "padding": 4,
@@ -91,7 +91,7 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
           className="followItem"
           onClick={[Function]}
         >
-          Unfollow
+          Follow
         </button>
       </div>
       <div
@@ -136,12 +136,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="amet aliqua cupidatat dolore Lorem elit voluptate proident tempor incididunt"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      amet aliqua cupidatat dolore Lorem elit voluptate proident tempor incididunt
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -190,7 +193,7 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
                 style={
                   Object {
                     "cursor": "pointer",
-                    "fill": "gold",
+                    "fill": "grey",
                     "height": 15,
                     "marginTop": 4,
                     "padding": 4,
@@ -251,12 +254,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="exercitation in ut do non anim elit laboris sunt eiusmod"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      exercitation in ut do non anim elit laboris sunt eiusmod
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -367,12 +373,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="irure mollit incididunt amet veniam aute ullamco anim et Lorem"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      irure mollit incididunt amet veniam aute ullamco anim et Lorem
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -476,12 +485,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="magna eiusmod cupidatat nisi excepteur esse non fugiat labore consectetur"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      magna eiusmod cupidatat nisi excepteur esse non fugiat labore consectetur
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -586,12 +598,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="do exercitation proident sunt eu aute est dolor sit occaecat"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      do exercitation proident sunt eu aute est dolor sit occaecat
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -696,12 +711,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="aliquip ea enim voluptate aliqua enim labore pariatur occaecat officia"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      aliquip ea enim voluptate aliqua enim labore pariatur occaecat officia
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -805,12 +823,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="nisi excepteur eiusmod Lorem id in nisi tempor ex anim"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      nisi excepteur eiusmod Lorem id in nisi tempor ex anim
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -914,12 +935,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="elit aute duis amet aliquip nostrud in consequat velit et"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      elit aute duis amet aliquip nostrud in consequat velit et
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -1024,12 +1048,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="amet minim minim veniam ad adipisicing nulla quis voluptate amet"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      amet minim minim veniam ad adipisicing nulla quis voluptate amet
+    </h3>
     <div
       className="authorAndLikesItem"
     >
@@ -1133,12 +1160,15 @@ exports[`App Component App Snapshots renders correctly when there is \`state\` 1
     className="articleContainer"
   >
     <img
+      alt="laboris incididunt fugiat occaecat excepteur Lorem Lorem exercitation deserunt esse"
       className="articleImageItem"
       src="article.jpeg"
     />
     <h3
       className="articleTitleItem"
-    />
+    >
+      laboris incididunt fugiat occaecat excepteur Lorem Lorem exercitation deserunt esse
+    </h3>
     <div
       className="authorAndLikesItem"
     >

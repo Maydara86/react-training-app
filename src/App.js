@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import data from './data/users-data.json'
+import usersData from './data/users-data.json'
 import articlesData from './data/articles-data.json'
 import Article from './components/Article/Article'
 import User from './components/User/User'
@@ -8,7 +8,7 @@ import User from './components/User/User'
 export default class App extends React.Component {
   constructor() {
     super()
-    this.state = { users: data, articles: articlesData }
+    this.state = { users: usersData, articles: articlesData }
     this.clickFollowHandler = this.clickFollowHandler.bind(this)
     this.clickStarHandler = this.clickStarHandler.bind(this)
     this.clickClapHandler = this.clickClapHandler.bind(this)

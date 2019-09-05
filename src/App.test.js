@@ -27,12 +27,12 @@ describe('App Component', () => {
 
   it('clickFollowHandler method have the expected effect on the state of the second user', () => {
     wrapper.clickFollowHandler('5d552d00b20b141dff10d2a2')
-    expect(wrapper.state.users[1].isFollowed).toBeFalsy()
+    expect(wrapper.state.users[1].isFollowed).toBeTruthy()
   })
 
-  it('Testing clickStarHandler method to have the expected effect on the state of the first user', () => {
+  it('clickStarHandler method to have the expected effect on the state of the first user', () => {
     wrapper.clickStarHandler('5d552d0058f193f2795fc814')
-    expect(wrapper.state.users[0].isStarred).toBeFalsy()
+    expect(wrapper.state.users[0].isStarred).toBeTruthy()
   })
 
   it('calling the clickStarHandler method has the expected effect on the state of the second user', () => {

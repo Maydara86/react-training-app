@@ -1,14 +1,32 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import { shallow } from '../../enzyme'
 import Article, { ClapUnfilled, ClapFilled, BookmarkUnfilled, BookmarkFilled } from './Article'
+import users from '../../data/users-data.json'
+import articles from '../../data/articles-data.json'
+
+jest.mock('../../data/articles-data.json')
+jest.mock('../../data/users-data.json')
+
+const ArticleComponent = shallow(
+  <Article handleFollowClick={() => {}} handleStarClick={() => {}} />
+)
 
 describe('Article', () => {
-  const ArticleComponent = shallow(
-    <Article handleFollowClick={() => {}} handleStarClick={() => {}} />
-  )
-
   it('renders correctly', () => {
-    expect(ArticleComponent).toMatchSnapshot()
+    const tree = renderer
+      .create(
+        <Article
+          {...articles[0]}
+          user={users[0]}
+          handleClapClick={() => {}}
+          handleBookmarkClick={() => {}}
+          handleFollowClick={() => {}}
+          handleStarClick={() => {}}
+        />
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
   describe('checks bookmark ternary', () => {
