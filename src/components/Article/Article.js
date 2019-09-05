@@ -5,7 +5,7 @@ import User from '../User/User'
 
 export default function Article({
   id,
-  name,
+  articleName,
   claps,
   bookmark,
   handleClapClick,
@@ -40,8 +40,8 @@ export default function Article({
 
   return (
     <div key={id} className={styles.articleContainer}>
-      <img src={myImage} alt={name} className={styles.articleImageItem} />
-      <h3 className={styles.articleTitleItem}>{name}</h3>
+      <img src={myImage} alt={articleName} className={styles.articleImageItem} />
+      <h3 className={styles.articleTitleItem}>{articleName}</h3>
       <div className={styles.authorAndLikesItem}>
         <div className={styles.authorAndLikesContainer}>
           <User
