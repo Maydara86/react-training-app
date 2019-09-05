@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import User, { Icon } from './User'
+import User from './User'
+import { Star } from '../Svg/Svg'
 
 const user = {
   id: '5d552d0058f193f2795fc814',
@@ -46,13 +47,13 @@ it('renders the right color depending on the `isStarred`', () => {
   )
 
   const testInstance = testRenderer.root
-  expect(testInstance.findByType(Icon).props.color).toBe('grey')
+  expect(testInstance.findByType(Star).props.color).toBe('grey')
 })
 
 it('when user clicks on the star icon', () => {
   const mockStarClick = jest.fn()
   const testRenderer = renderer.create(
-    <Icon color="grey" handleStarClick={mockStarClick} id="5d552d0058f193f2795fc814" />
+    <Star color="grey" handleStarClick={mockStarClick} id="5d552d0058f193f2795fc814" />
   )
 
   const testInstance = testRenderer.root

@@ -1,7 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { shallow } from '../../enzyme'
-import Article, { ClapUnfilled, ClapFilled, BookmarkUnfilled, BookmarkFilled } from './Article'
+import Article from './Article'
+import { ClapUnfilled, ClapFilled, BookmarkUnfilled, BookmarkFilled } from '../Svg/Svg'
 import users from '../../data/users-data.json'
 import articles from '../../data/articles-data.json'
 
