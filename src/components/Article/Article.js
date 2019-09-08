@@ -9,12 +9,15 @@ export default function Article({
   articleName,
   claps,
   bookmark,
+  responses,
+  content,
+  user,
+  didClap,
   handleClapClick,
   handleBookmarkClick,
   handleStarClick,
   handleFollowClick,
-  didClap,
-  user,
+  useArticleSimplifiedLayout,
 }) {
   const bookmarkFilled = (
     <BookmarkFilled
@@ -39,6 +42,28 @@ export default function Article({
     <ClapUnfilled className={styles.clapsIconItem} handleClapClick={handleClapClick} id={id} />
   )
 
+  if (useArticleSimplifiedLayout) {
+    return (
+      <div key={id} className={styles.articleContainer}>
+        <User
+          className={styles.authorItem}
+          {...user}
+          useSimplifiedLayout
+          handleFollowClick={handleFollowClick}
+          handleStarClick={handleStarClick}
+        />
+        <img src={myImage} alt={articleName} className={styles.articleImageItem} />
+        <h3 className={styles.articleTitleItem}>{articleName}</h3>
+        <p>{content}</p>
+        <p>Read more...</p>
+        <p>responses: {responses}</p>
+        <div>
+          {didClap ? clapFilled : clapUnfilled}
+          {bookmark ? bookmarkFilled : bookmarkUnfilled}
+        </div>
+      </div>
+    )
+  }
   return (
     <div key={id} className={styles.articleContainer}>
       <img src={myImage} alt={articleName} className={styles.articleImageItem} />

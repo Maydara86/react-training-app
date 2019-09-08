@@ -3,8 +3,9 @@ import './App.css'
 import usersData from './data/users-data.json'
 import articlesData from './data/articles-data.json'
 import Article from './components/Article/Article'
-import ArticleGrid from './components/ArticleGrid/ArticleGrid'
+// import ArticleGrid from './components/ArticleGrid/ArticleGrid'
 // import User from './components/User/User'
+import BigArticle from './components/BigArticle/BigArticle'
 
 export default class App extends React.Component {
   constructor() {
@@ -84,7 +85,8 @@ export default class App extends React.Component {
             />
           )
         })} */}
-        <ArticleGrid>
+
+        {/* <ArticleGrid>
           {articles.map((article, i) => {
             return (
               <Article
@@ -98,7 +100,24 @@ export default class App extends React.Component {
               />
             )
           })}
-        </ArticleGrid>
+        </ArticleGrid> */}
+
+        <BigArticle>
+          {articles.map((article, i) => {
+            return (
+              <Article
+                key={article.id}
+                {...article}
+                user={users[i]}
+                handleClapClick={this.clickClapHandler}
+                handleBookmarkClick={this.clickBookmarkHandler}
+                handleFollowClick={this.clickFollowHandler}
+                handleStarClick={this.clickStarHandler}
+                useArticleSimplifiedLayout
+              />
+            )
+          })}
+        </BigArticle>
       </div>
     )
   }
