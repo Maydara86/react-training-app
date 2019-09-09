@@ -22,11 +22,16 @@ export default function Article({
   const magazinTheme = {
     '--article-width': '700px',
     '--article-height': '740px',
+    '--article-title-color': 'black',
+    '--article-title-fontweight': 'bold',
+    '--article-title-size': '30px',
   }
 
   const gridTheme = {
     '--article-width': '400px',
     '--article-height': '440px',
+    '--article-title-color': 'rgba(0, 0, 0, 0.84)',
+    '--article-title-fontweight': '500',
   }
 
   const theme = useArticleMagazinLayout ? magazinTheme : gridTheme
@@ -71,8 +76,8 @@ export default function Article({
         <img src={myImage} alt={articleName} className={styles.articleImageItem} />
         <h3 className={styles.articleTitleItem}>{articleName}</h3>
         <p>{content}</p>
-        <p>Read more...</p>
-        <p>responses: {responses}</p>
+        <span className={styles.readMore}>Read more...</span>
+        <div>responses: {responses}</div>
         <div>
           {didClap ? clapFilled : clapUnfilled}
           {bookmark ? bookmarkFilled : bookmarkUnfilled}

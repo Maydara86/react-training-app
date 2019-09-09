@@ -1,16 +1,30 @@
 h3 {
     font-family: Georgia, "Times New Roman", Times, serif;
     letter-spacing: 0em;
-    font-weight: 500;
+    font-weight: var(--article-title-fontweight);
     line-height: 32px;
-    font-size: 24px;
-    color: rgba(0, 0, 0, 0.84);
+    font-size: var(--article-title-size);
+    color: var(--article-title-color);
     font-style: normal;
     box-sizing: inherit;
 }
 
 h3:hover {
     cursor: pointer;
+}
+
+p {
+    margin-top: -20px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 24px;
+}
+
+.readMore {
+    font-weight: 300;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.54);
+    margin-top: 0px;
+    margin-left: 0px;
 }
 
 
