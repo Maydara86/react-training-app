@@ -21,7 +21,7 @@ export default function Article({
 }) {
   const magazinTheme = {
     '--article-width': '700px',
-    '--article-height': '740px',
+    '--article-height': '640px',
     '--article-title-color': 'black',
     '--article-title-fontweight': 'bold',
     '--article-title-size': '30px',
@@ -77,10 +77,15 @@ export default function Article({
         <h3 className={styles.articleTitleItem}>{articleName}</h3>
         <p>{content}</p>
         <span className={styles.readMore}>Read more...</span>
-        <div>responses: {responses}</div>
-        <div>
-          {didClap ? clapFilled : clapUnfilled}
-          {bookmark ? bookmarkFilled : bookmarkUnfilled}
+        <div className={styles.appreciation}>
+          <div className={styles.claps}>
+            {didClap ? clapFilled : clapUnfilled}
+            <span className={styles.clapsNumber}>{claps}</span>
+          </div>
+          <div className={styles.responses}>
+            <div className={styles.responsesNumber}>{responses} responses</div>
+            {bookmark ? bookmarkFilled : bookmarkUnfilled}
+          </div>
         </div>
       </div>
     )
