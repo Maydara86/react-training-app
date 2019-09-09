@@ -25,6 +25,7 @@ export default function Article({
     '--article-title-color': 'black',
     '--article-title-fontweight': 'bold',
     '--article-title-size': '30px',
+    '--article-border': 'solid',
   }
 
   const gridTheme = {
@@ -32,6 +33,7 @@ export default function Article({
     '--article-height': '440px',
     '--article-title-color': 'rgba(0, 0, 0, 0.84)',
     '--article-title-fontweight': '500',
+    '--article-border': 'none',
   }
 
   const theme = useArticleMagazinLayout ? magazinTheme : gridTheme
@@ -60,7 +62,12 @@ export default function Article({
     <ClapFilled className={styles.clapsIconItem} handleClapClick={handleClapClick} id={id} />
   )
   const clapUnfilled = (
-    <ClapUnfilled className={styles.clapsIconItem} handleClapClick={handleClapClick} id={id} />
+    <ClapUnfilled
+      className={styles.clapsIconItem}
+      handleClapClick={handleClapClick}
+      id={id}
+      changeSvgColor={useArticleMagazinLayout ? 'change' : 'idle'}
+    />
   )
 
   if (useArticleMagazinLayout) {

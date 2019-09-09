@@ -1,7 +1,28 @@
 import React from 'react'
 import styles from './Svg.module.css'
 
-export function ClapUnfilled({ id, handleClapClick }) {
+const magazinTheme = {
+  '--clap-color': 'green',
+  '--clap-hover-color': 'darkgreen',
+}
+
+const gridTheme = {
+  '--clap-color': 'grey',
+  '--clap-hover-color': 'black',
+}
+
+const applyTheme = changeSvgColor => {
+  const theme = changeSvgColor === 'change' ? magazinTheme : gridTheme
+  Object.keys(theme).map(key => {
+    const value = theme[key]
+    document.documentElement.style.setProperty(key, value)
+  })
+}
+
+export function ClapUnfilled({ id, handleClapClick, changeSvgColor }) {
+  if (changeSvgColor) {
+    applyTheme(changeSvgColor)
+  }
   return (
     <svg
       className={styles.clap}

@@ -121,6 +121,9 @@ p {
     align-items: stretch;
     width: var(--article-width);
     height: var(--article-height);
+    border-bottom-style: var(--article-border);
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.14);
 }
 
 .articleImageItem:nth-child(1) {
