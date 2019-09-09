@@ -36,8 +36,8 @@ h3:hover {
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    width: 400px;
-    height: 470px;
+    width: var(--article-width);
+    height: var(--article-height);
 }
 
 .articleImageItem:nth-child(1) {

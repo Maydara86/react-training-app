@@ -17,8 +17,24 @@ export default function Article({
   handleBookmarkClick,
   handleStarClick,
   handleFollowClick,
-  useArticleSimplifiedLayout,
+  useArticleMagazinLayout,
 }) {
+  const magazinTheme = {
+    '--article-width': '700px',
+    '--article-height': '740px',
+  }
+
+  const gridTheme = {
+    '--article-width': '400px',
+    '--article-height': '440px',
+  }
+
+  const theme = useArticleMagazinLayout ? magazinTheme : gridTheme
+  Object.keys(theme).map(key => {
+    const value = theme[key]
+    document.documentElement.style.setProperty(key, value)
+  })
+
   const bookmarkFilled = (
     <BookmarkFilled
       className={styles.bookmarkIconItem}
@@ -42,7 +58,7 @@ export default function Article({
     <ClapUnfilled className={styles.clapsIconItem} handleClapClick={handleClapClick} id={id} />
   )
 
-  if (useArticleSimplifiedLayout) {
+  if (useArticleMagazinLayout) {
     return (
       <div key={id} className={styles.articleContainer}>
         <User

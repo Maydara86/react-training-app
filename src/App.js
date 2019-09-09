@@ -5,7 +5,7 @@ import articlesData from './data/articles-data.json'
 import Article from './components/Article/Article'
 // import ArticleGrid from './components/ArticleGrid/ArticleGrid'
 // import User from './components/User/User'
-import BigArticle from './components/BigArticle/BigArticle'
+import ArticleMagazin from './components/ArticleMagazin/ArticleMagazin'
 
 export default class App extends React.Component {
   constructor() {
@@ -102,7 +102,7 @@ export default class App extends React.Component {
           })}
         </ArticleGrid> */}
 
-        <BigArticle>
+        <ArticleMagazin>
           {articles.map((article, i) => {
             return (
               <Article
@@ -113,11 +113,11 @@ export default class App extends React.Component {
                 handleBookmarkClick={this.clickBookmarkHandler}
                 handleFollowClick={this.clickFollowHandler}
                 handleStarClick={this.clickStarHandler}
-                useArticleSimplifiedLayout
+                useArticleMagazinLayout
               />
             )
           })}
-        </BigArticle>
+        </ArticleMagazin>
       </div>
     )
   }
