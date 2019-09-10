@@ -1,0 +1,17 @@
+.bookmark {
+    fill: grey;
+    cursor: pointer;
+}
+
+.bookmark:hover {
+    fill: black;
+}
+
+.clap {
+    fill: grey;
+    cursor: pointer;
+}
+
+.clap:hover {
+    fill: black;
+}

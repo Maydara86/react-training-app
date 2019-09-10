@@ -1,36 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly when there is one user 1`] = `
+exports[`checks if the User is called from an article 1`] = `
 <div
-  className="container"
+  className="smallUserContainer"
 >
   <img
     alt="Walton Morton"
-    className="imageContainer"
+    className="smallUserImageItem"
     src="avatar.png"
   />
   <div
-    className="contentContainer"
+    className="smallUserInfoItem"
   >
     <div
-      className="contentContainerRow1"
+      className="smallContentContainerRow1"
     >
       <div
-        className="name"
+        className="nameItem"
       >
         Walton Morton
       </div>
-      <button
-        onClick={[Function]}
-      >
-        Follow
-      </button>
     </div>
     <div
       className="contentContainerRow2"
     >
       <div
-        className="date"
+        className="dateItem"
       >
         Aug 9
       </div>
@@ -38,7 +33,7 @@ exports[`renders correctly when there is one user 1`] = `
         ·
       </span>
       <div
-        className="time"
+        className="readingTimeItem"
       >
         20
          min read
@@ -48,7 +43,74 @@ exports[`renders correctly when there is one user 1`] = `
         style={
           Object {
             "cursor": "pointer",
-            "fill": "grey",
+            "fill": "gold",
+            "height": 15,
+            "marginTop": 4,
+            "padding": 4,
+            "width": 15,
+          }
+        }
+        viewBox="0 0 15 15"
+      >
+        <path
+          d="M7.44 2.32c.03-.1.09-.1.12 0l1.2 3.53a.29.29 0 00.26.2h3.88c.11 0 .13.04.04.1L9.8 8.33a.27.27 0 00-.1.29l1.2 3.53c.03.1-.01.13-.1.07l-3.14-2.18a.3.3 0 00-.32 0L4.2 12.22c-.1.06-.14.03-.1-.07l1.2-3.53a.27.27 0 00-.1-.3L2.06 6.16c-.1-.06-.07-.12.03-.12h3.89a.29.29 0 00.26-.19l1.2-3.52z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly when there is one user 1`] = `
+<div
+  className="userContainer"
+>
+  <img
+    alt="Walton Morton"
+    className="userImageItem"
+    src="avatar.png"
+  />
+  <div
+    className="userInfoItem"
+  >
+    <div
+      className="contentContainerRow1"
+    >
+      <div
+        className="nameItem"
+      >
+        Walton Morton
+      </div>
+      <button
+        className="followItem"
+        onClick={[Function]}
+      >
+        Unfollow
+      </button>
+    </div>
+    <div
+      className="contentContainerRow2"
+    >
+      <div
+        className="dateItem"
+      >
+        Aug 9
+      </div>
+      <span>
+        ·
+      </span>
+      <div
+        className="readingTimeItem"
+      >
+        20
+         min read
+      </div>
+      <svg
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "fill": "gold",
             "height": 15,
             "marginTop": 4,
             "padding": 4,
