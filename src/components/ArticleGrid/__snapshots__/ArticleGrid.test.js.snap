@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleGrid renders corrctly using mount 1`] = `"<div class=\\"container\\"></div>"`;
+
+exports[`ArticleGrid renders corrctly using mount 2`] = `ShallowWrapper {}`;
+
+exports[`ArticleGrid renders correctly using jest renderer 1`] = `
+<div
+  className="container"
+/>
+`;

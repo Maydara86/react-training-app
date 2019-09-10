@@ -3,7 +3,8 @@ import './App.css'
 import usersData from './data/users-data.json'
 import articlesData from './data/articles-data.json'
 import Article from './components/Article/Article'
-import User from './components/User/User'
+import ArticleGrid from './components/ArticleGrid/ArticleGrid'
+// import User from './components/User/User'
 
 export default class App extends React.Component {
   constructor() {
@@ -73,7 +74,7 @@ export default class App extends React.Component {
 
     return (
       <div>
-        {users.map(user => {
+        {/* {users.map(user => {
           return (
             <User
               {...user}
@@ -82,20 +83,22 @@ export default class App extends React.Component {
               handleStarClick={this.clickStarHandler}
             />
           )
-        })}
-        {articles.map((article, i) => {
-          return (
-            <Article
-              key={article.id}
-              {...article}
-              user={users[i]}
-              handleClapClick={this.clickClapHandler}
-              handleBookmarkClick={this.clickBookmarkHandler}
-              handleFollowClick={this.clickFollowHandler}
-              handleStarClick={this.clickStarHandler}
-            />
-          )
-        })}
+        })} */}
+        <ArticleGrid>
+          {articles.map((article, i) => {
+            return (
+              <Article
+                key={article.id}
+                {...article}
+                user={users[i]}
+                handleClapClick={this.clickClapHandler}
+                handleBookmarkClick={this.clickBookmarkHandler}
+                handleFollowClick={this.clickFollowHandler}
+                handleStarClick={this.clickStarHandler}
+              />
+            )
+          })}
+        </ArticleGrid>
       </div>
     )
   }
