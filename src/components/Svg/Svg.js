@@ -12,17 +12,15 @@ const gridTheme = {
 }
 
 const applyTheme = changeSvgColor => {
-  const theme = changeSvgColor === 'change' ? magazinTheme : gridTheme
+  const theme = changeSvgColor ? magazinTheme : gridTheme
   Object.keys(theme).map(key => {
     const value = theme[key]
     document.documentElement.style.setProperty(key, value)
   })
 }
-
 export function ClapUnfilled({ id, handleClapClick, changeSvgColor }) {
-  if (changeSvgColor) {
-    applyTheme(changeSvgColor)
-  }
+  applyTheme(changeSvgColor)
+
   return (
     <svg
       className={styles.clap}

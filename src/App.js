@@ -3,7 +3,7 @@ import './App.css'
 import usersData from './data/users-data.json'
 import articlesData from './data/articles-data.json'
 import Article from './components/Article/Article'
-import ArticleGrid from './components/ArticleGrid/ArticleGrid'
+// import ArticleGrid from './components/ArticleGrid/ArticleGrid'
 // import User from './components/User/User'
 import ArticleMagazin from './components/ArticleMagazin/ArticleMagazin'
 

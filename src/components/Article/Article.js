@@ -66,7 +66,7 @@ export default function Article({
       className={styles.clapsIconItem}
       handleClapClick={handleClapClick}
       id={id}
-      changeSvgColor={useArticleMagazinLayout ? 'change' : 'idle'}
+      changeSvgColor={useArticleMagazinLayout}
     />
   )
 
