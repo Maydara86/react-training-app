@@ -1,15 +1,18 @@
 import React from 'react'
 import './App.css'
+import { connect } from 'react-redux'
 import usersData from './data/users-data.json'
 import articlesData from './data/articles-data.json'
 import Article from './components/Article/Article'
 // import ArticleGrid from './components/ArticleGrid/ArticleGrid'
 // import User from './components/User/User'
 import ArticleMagazin from './components/ArticleMagazin/ArticleMagazin'
+import updatePerson from './store/actions/personAction'
+import updateGame from './store/actions/gameAction'
 
-export default class App extends React.Component {
-  constructor() {
-    super()
+class App extends React.Component {
+  constructor(props) {
+    super(props)
     this.state = { users: usersData, articles: articlesData }
     this.clickFollowHandler = this.clickFollowHandler.bind(this)
     this.clickStarHandler = this.clickStarHandler.bind(this)
@@ -85,7 +88,6 @@ export default class App extends React.Component {
             />
           )
         })} */}
-
         {/* <ArticleGrid>
           {articles.map((article, i) => {
             return (
@@ -101,7 +103,6 @@ export default class App extends React.Component {
             )
           })}
         </ArticleGrid> */}
-
         <ArticleMagazin>
           {articles.map((article, i) => {
             return (
@@ -118,7 +119,33 @@ export default class App extends React.Component {
             )
           })}
         </ArticleMagazin>
+        <h2>Redux Tutorial</h2>
+        Person Name: {this.props.person.name}
+        <button onClick={this.props.personClickHandler}>Update Person</button>
+        <br />
+        Game Name: {this.props.game.name}
+        <button onClick={this.props.gameClickHandler}>Update Game</button>
       </div>
     )
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    game: state.game,
+    person: state.person,
+    users: state.users,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    personClickHandler: () => dispatch(updatePerson),
+    gameClickHandler: () => dispatch(updateGame),
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
