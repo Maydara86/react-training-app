@@ -9,6 +9,8 @@ import Article from './components/Article/Article'
 import ArticleMagazin from './components/ArticleMagazin/ArticleMagazin'
 import updateUsers from './store/actions/usersAction'
 import updateArticles from './store/actions/articlesAction'
+import usersSelector from './selectors/users'
+import articlesSelector from './selectors/articles'
 
 class App extends React.Component {
   constructor(props) {
@@ -132,8 +134,8 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    articles: state.articles,
-    users: state.users,
+    articles: articlesSelector(state),
+    users: usersSelector(state),
   }
 }
 
