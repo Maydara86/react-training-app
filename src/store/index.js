@@ -1,15 +1,17 @@
 import { createStore, combineReducers } from 'redux'
-import gameReducer from './reducers/gameReducer'
-import personReducer from './reducers/personReducers'
+import articlesReducer from './reducers/articlesReducer'
+import usersReducer from './reducers/usersReducers'
+import usersData from '../data/users-data.json'
+import articlesData from '../data/articles-data.json'
 
 const initialStates = {
-  game: { name: 'Doom' },
-  person: { name: 'Momo', email: 'Mimi@aol.com' },
+  articles: articlesData,
+  users: usersData,
 }
 
 const allReducers = combineReducers({
-  person: personReducer,
-  game: gameReducer,
+  users: usersReducer,
+  articles: articlesReducer,
 })
 
 const store = createStore(
