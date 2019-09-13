@@ -1,8 +1,7 @@
 import React from 'react'
 import './App.css'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-// import usersData from './data/users-data.json'
-// import articlesData from './data/articles-data.json'
 import Article from './components/Article/Article'
 // import ArticleGrid from './components/ArticleGrid/ArticleGrid'
 // import User from './components/User/User'
@@ -15,7 +14,6 @@ import articlesSelector from './selectors/articles'
 class App extends React.Component {
   constructor(props) {
     super(props)
-    // this.state = { users: usersData, articles: articlesData }
     this.clickFollowHandler = this.clickFollowHandler.bind(this)
     this.clickStarHandler = this.clickStarHandler.bind(this)
     this.clickClapHandler = this.clickClapHandler.bind(this)
@@ -37,17 +35,13 @@ class App extends React.Component {
   }
 
   clickStarHandler(id) {
-    this.setState(prevState => {
-      const updatedUsers = prevState.users.map(user => {
-        if (user.id === id) {
-          user.isStarred = !user.isStarred
-        }
-        return user
-      })
-      return {
-        users: updatedUsers,
+    const updatedUsers = this.props.users.map(user => {
+      if (user.id === id) {
+        user.isStarred = !user.isStarred
       }
+      return user
     })
+    this.props.updateUsers(updatedUsers)
   }
 
   clickClapHandler(id) {
@@ -121,12 +115,6 @@ class App extends React.Component {
             )
           })}
         </ArticleMagazin>
-        <h2>Redux Tutorial</h2>
-        Person Name: {users[0].name}
-        <button onClick={this.props.personClickHandler}>Update Person</button>
-        <br />
-        Game Name: {articles[0].id}
-        <button onClick={this.props.gameClickHandler}>Update Game</button>
       </div>
     )
   }
@@ -140,10 +128,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return {
-    personClickHandler: () => dispatch(updateUsers),
-    gameClickHandler: () => dispatch(updateArticles),
-  }
+  return bindActionCreators({ updateUsers }, dispatch)
 }
 
 export default connect(
