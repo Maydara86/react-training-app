@@ -1,9 +1,14 @@
-import { UPDATE_PERSON } from '../actions/usersAction'
+import { TOGGLE_STAR_ICON } from '../actions/usersAction'
 
 const usersReducer = (state = {}, { type, payload }) => {
   switch (type) {
-    case UPDATE_PERSON:
-      return payload
+    case TOGGLE_STAR_ICON:
+      return state.map(user => {
+        if (user.id === payload) {
+          user.isStarred = !user.isStarred
+        }
+        return user
+      })
 
     default:
       return state

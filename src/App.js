@@ -6,7 +6,7 @@ import Article from './components/Article/Article'
 // import ArticleGrid from './components/ArticleGrid/ArticleGrid'
 // import User from './components/User/User'
 import ArticleMagazin from './components/ArticleMagazin/ArticleMagazin'
-import updateUsers from './store/actions/usersAction'
+import clickStarHandler from './store/actions/usersAction'
 import updateArticles from './store/actions/articlesAction'
 import usersSelector from './selectors/users'
 import articlesSelector from './selectors/articles'
@@ -15,7 +15,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.clickFollowHandler = this.clickFollowHandler.bind(this)
-    this.clickStarHandler = this.clickStarHandler.bind(this)
+    // this.clickStarHandler = this.clickStarHandler.bind(this)
     this.clickClapHandler = this.clickClapHandler.bind(this)
     this.clickBookmarkHandler = this.clickBookmarkHandler.bind(this)
   }
@@ -34,15 +34,16 @@ class App extends React.Component {
     })
   }
 
-  clickStarHandler(id) {
-    const updatedUsers = this.props.users.map(user => {
-      if (user.id === id) {
-        user.isStarred = !user.isStarred
-      }
-      return user
-    })
-    this.props.updateUsers(updatedUsers)
-  }
+  // clickStarHandler(id) {
+  //   const updatedUsers = this.props.users.map(user => {
+  //     if (user.id === id) {
+  //       user.isStarred = !user.isStarred
+  //     }
+  //     return user
+  //   })
+  //   this.props.clickStarHandler(id)
+  //   move the logic to the reducer and use an action here to change the sate
+  // }
 
   clickClapHandler(id) {
     this.setState(prevState => {
@@ -109,7 +110,7 @@ class App extends React.Component {
                 handleClapClick={this.clickClapHandler}
                 handleBookmarkClick={this.clickBookmarkHandler}
                 handleFollowClick={this.clickFollowHandler}
-                handleStarClick={this.clickStarHandler}
+                handleStarClick={this.props.clickStarHandler}
                 useArticleMagazinLayout
               />
             )
@@ -128,7 +129,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ updateUsers }, dispatch)
+  return bindActionCreators({ clickStarHandler }, dispatch)
 }
 
 export default connect(

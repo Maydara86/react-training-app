@@ -1,7 +1,7 @@
-export const UPDATE_PERSON = 'UPDATE_USERS'
+export const TOGGLE_STAR_ICON = 'TOGGLE_STAR_ICON'
 
-const updateUsers = updatedUsers => {
-  return { type: UPDATE_PERSON, payload: updatedUsers }
+const clickStarHandler = userId => {
+  return { type: TOGGLE_STAR_ICON, payload: userId }
 }
 
-export default updateUsers
+export default clickStarHandler
