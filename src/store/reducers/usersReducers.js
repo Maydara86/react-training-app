@@ -1,4 +1,4 @@
-import { TOGGLE_STAR_ICON } from '../actions/usersAction'
+import { TOGGLE_STAR_ICON, CLICK_FOLLOW_BUTTON } from '../actions/usersAction'
 
 const usersReducer = (state = {}, { type, payload }) => {
   switch (type) {
@@ -6,6 +6,14 @@ const usersReducer = (state = {}, { type, payload }) => {
       return state.map(user => {
         if (user.id === payload) {
           user.isStarred = !user.isStarred
+        }
+        return user
+      })
+
+    case CLICK_FOLLOW_BUTTON:
+      return state.map(user => {
+        if (user.id === payload) {
+          user.isFollowed = !user.isFollowed
         }
         return user
       })
