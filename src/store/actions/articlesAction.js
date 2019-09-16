@@ -1,5 +1,7 @@
-export const UPDATE_GAME = 'UPDATE_GAME'
+export const TOGGLE_BOOKMARK_ICON = 'TOGGLE_BOOKMARK_ICON'
 
-const updateArticles = { type: UPDATE_GAME, payload: 'World of Warcraft' }
+const clickBookmarkHandler = userId => {
+  return { type: TOGGLE_BOOKMARK_ICON, payload: userId }
+}
 
-export default updateArticles
+export default clickBookmarkHandler
