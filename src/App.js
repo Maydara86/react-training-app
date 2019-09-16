@@ -7,7 +7,7 @@ import Article from './components/Article/Article'
 // import User from './components/User/User'
 import ArticleMagazin from './components/ArticleMagazin/ArticleMagazin'
 import clickStarHandler from './store/actions/usersAction'
-import clickBookmarkHandler from './store/actions/articlesAction'
+import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
 import usersSelector from './selectors/users'
 import articlesSelector from './selectors/articles'
 
@@ -15,8 +15,6 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.clickFollowHandler = this.clickFollowHandler.bind(this)
-    this.clickClapHandler = this.clickClapHandler.bind(this)
-    // this.clickBookmarkHandler = this.clickBookmarkHandler.bind(this)
   }
 
   clickFollowHandler(id) {
@@ -33,33 +31,8 @@ class App extends React.Component {
     })
   }
 
-  clickClapHandler(id) {
-    this.setState(prevState => {
-      const updatedArticles = prevState.articles.map(a => {
-        if (a.id === id) {
-          a.claps += 1
-          a.didClap = true
-        }
-        return a
-      })
-      return { articles: updatedArticles }
-    })
-  }
-
-  // clickBookmarkHandler(id) {
-  //   this.setState(prevState => {
-  //     const updatedArticles = prevState.articles.map(a => {
-  //       if (a.id === id) {
-  //         a.bookmark = !a.bookmark
-  //       }
-  //       return a
-  //     })
-  //     return { articles: updatedArticles }
-  //   })
-  // }
-
   render() {
-    const { users, articles } = this.props
+    const { users, articles, clickClapHandler, clickBookmarkHandler, clickStarHandler } = this.props
 
     return (
       <div>
@@ -94,11 +67,11 @@ class App extends React.Component {
               <Article
                 key={article.id}
                 {...article}
-                user={this.props.users[i]}
-                handleClapClick={this.clickClapHandler}
-                handleBookmarkClick={this.props.clickBookmarkHandler}
+                user={users[i]}
+                handleClapClick={clickClapHandler}
+                handleBookmarkClick={clickBookmarkHandler}
                 handleFollowClick={this.clickFollowHandler}
-                handleStarClick={this.props.clickStarHandler}
+                handleStarClick={clickStarHandler}
                 useArticleMagazinLayout
               />
             )
@@ -117,7 +90,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ clickStarHandler, clickBookmarkHandler }, dispatch)
+  return bindActionCreators({ clickStarHandler, clickBookmarkHandler, clickClapHandler }, dispatch)
 }
 
 export default connect(
