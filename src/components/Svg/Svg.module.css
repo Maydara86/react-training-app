@@ -8,10 +8,10 @@
 }
 
 .clap {
-    fill: grey;
+    fill: var(--clap-color);
     cursor: pointer;
 }
 
 .clap:hover {
-    fill: black;
+    fill: var(--clap-hover-color);
 }

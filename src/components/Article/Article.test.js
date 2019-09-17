@@ -9,12 +9,14 @@ import articles from '../../data/articles-data.json'
 jest.mock('../../data/articles-data.json')
 jest.mock('../../data/users-data.json')
 
-const ArticleComponent = shallow(
-  <Article handleFollowClick={() => {}} handleStarClick={() => {}} />
+const ArticleOne = shallow(
+  <Article handleFollowClick={() => {}} handleStarClick={() => {}} useArticlesListLayout />
 )
 
-describe('Article', () => {
-  it('renders correctly', () => {
+const ArticleTwo = shallow(<Article handleFollowClick={() => {}} handleStarClick={() => {}} />)
+
+describe('ArticleOne with `useArticlesListLayout` NOT set', () => {
+  it('renders correctly when `useArticlesListLayout` is not set', () => {
     const tree = renderer
       .create(
         <Article
@@ -32,20 +34,22 @@ describe('Article', () => {
 
   describe('checks bookmark ternary', () => {
     beforeEach(() => {
-      ArticleComponent.setProps({ bookmark: true })
+      ArticleOne.setProps({ bookmark: true })
     })
 
     it('renders BookmarkFilled component', () => {
-      expect(ArticleComponent.find('BookmarkFilled').exists()).toBeTruthy()
+      expect(ArticleOne.find('BookmarkFilled').exists()).toBeTruthy()
     })
   })
 
   describe('checks didClap ternary', () => {
-    beforeEach(() => {
-      ArticleComponent.setProps({ didClap: true })
+    it('renders ClapUnfilled componenet when `didClap` is false', () => {
+      expect(ArticleOne.find('ClapUnfilled').exists()).toBeTruthy()
     })
-    it('renders ClapFilled component', () => {
-      expect(ArticleComponent.find('ClapFilled').exists()).toBeTruthy()
+
+    it('renders ClapFilled component when `didClap` is true', () => {
+      ArticleOne.setProps({ didClap: true })
+      expect(ArticleOne.find('ClapFilled').exists()).toBeTruthy()
     })
   })
 
@@ -80,6 +84,46 @@ describe('Article', () => {
     it('when ClapFilled is clicked', () => {
       ClapFilledComponent.simulate('click')
       expect(mockHandleClapClick).toHaveBeenCalledWith(clapProps.id)
+    })
+  })
+})
+
+describe('ArticleTwo with `useArticlesListLayout` set', () => {
+  it('renders correctly when `useArticlesListLayout` is set', () => {
+    const tree = renderer
+      .create(
+        <Article
+          {...articles[0]}
+          user={users[0]}
+          handleClapClick={() => {}}
+          handleBookmarkClick={() => {}}
+          handleFollowClick={() => {}}
+          handleStarClick={() => {}}
+          useArticlesListLayout
+        />
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  describe('checks bookmark ternary', () => {
+    beforeEach(() => {
+      ArticleTwo.setProps({ bookmark: true })
+    })
+
+    it('renders BookmarkFilled component', () => {
+      expect(ArticleTwo.find('BookmarkFilled').exists()).toBeTruthy()
+    })
+  })
+
+  describe('checks didClap ternary', () => {
+    it('renders ClapUnfilled componenet when `didClap` is false', () => {
+      expect(ArticleTwo.find('ClapUnfilled').exists()).toBeTruthy()
+    })
+
+    it('renders ClapFilled component when `didClap` is true', () => {
+      ArticleTwo.setProps({ didClap: true })
+      expect(ArticleTwo.find('ClapFilled').exists()).toBeTruthy()
     })
   })
 })
