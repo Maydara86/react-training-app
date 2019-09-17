@@ -3,8 +3,6 @@ import './App.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Article from './components/Article/Article'
-// import ArticleGrid from './components/ArticleGrid/ArticleGrid'
-// import User from './components/User/User'
 import ArticleMagazin from './components/ArticleMagazin/ArticleMagazin'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
@@ -25,31 +23,6 @@ function App(props) {
 
   return (
     <div>
-      {/* {users.map(user => {
-          return (
-            <User
-              {...user}
-              key={user.id}
-              handleFollowClick={clickFollowHandler}
-              handleStarClick={clickStarHandler}
-            />
-          )
-        })} */}
-      {/* <ArticleGrid>
-          {articles.map((article, i) => {
-            return (
-              <Article
-                key={article.id}
-                {...article}
-                user={users[i]}
-                handleClapClick={clickClapHandler}
-                handleBookmarkClick={clickBookmarkHandler}
-                handleFollowClick={clickFollowHandler}
-                handleStarClick={clickStarHandler}
-              />
-            )
-          })}
-        </ArticleGrid> */}
       <ArticleMagazin>
         {articles.map((article, i) => {
           return (
