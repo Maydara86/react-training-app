@@ -10,13 +10,13 @@ jest.mock('../../data/articles-data.json')
 jest.mock('../../data/users-data.json')
 
 const ArticleOne = shallow(
-  <Article handleFollowClick={() => {}} handleStarClick={() => {}} useArticleMagazinLayout />
+  <Article handleFollowClick={() => {}} handleStarClick={() => {}} useArticlesListLayout />
 )
 
 const ArticleTwo = shallow(<Article handleFollowClick={() => {}} handleStarClick={() => {}} />)
 
-describe('ArticleOne with `useArticleMagazinLayout` NOT set', () => {
-  it('renders correctly when `useArticleMagazinLayout` is not set', () => {
+describe('ArticleOne with `useArticlesListLayout` NOT set', () => {
+  it('renders correctly when `useArticlesListLayout` is not set', () => {
     const tree = renderer
       .create(
         <Article
@@ -88,8 +88,8 @@ describe('ArticleOne with `useArticleMagazinLayout` NOT set', () => {
   })
 })
 
-describe('ArticleTwo with `useArticleMagazinLayout` set', () => {
-  it('renders correctly when `useArticleMagazinLayout` is set', () => {
+describe('ArticleTwo with `useArticlesListLayout` set', () => {
+  it('renders correctly when `useArticlesListLayout` is set', () => {
     const tree = renderer
       .create(
         <Article
@@ -99,7 +99,7 @@ describe('ArticleTwo with `useArticleMagazinLayout` set', () => {
           handleBookmarkClick={() => {}}
           handleFollowClick={() => {}}
           handleStarClick={() => {}}
-          useArticleMagazinLayout
+          useArticlesListLayout
         />
       )
       .toJSON()

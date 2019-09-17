@@ -3,7 +3,7 @@ import './App.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Article from './components/Article/Article'
-import ArticleMagazin from './components/ArticleMagazin/ArticleMagazin'
+import ArticlesList from './components/ArticlesList/ArticlesList'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
 import usersSelector from './selectors/users'
@@ -23,7 +23,7 @@ function App(props) {
 
   return (
     <div>
-      <ArticleMagazin>
+      <ArticlesList>
         {articles.map((article, i) => {
           return (
             <Article
@@ -34,11 +34,11 @@ function App(props) {
               handleBookmarkClick={clickBookmarkHandler}
               handleFollowClick={clickFollowHandler}
               handleStarClick={clickStarHandler}
-              useArticleMagazinLayout
+              useArticlesListLayout
             />
           )
         })}
-      </ArticleMagazin>
+      </ArticlesList>
     </div>
   )
 }

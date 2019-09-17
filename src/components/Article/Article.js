@@ -17,7 +17,7 @@ export default function Article({
   handleBookmarkClick,
   handleStarClick,
   handleFollowClick,
-  useArticleMagazinLayout,
+  useArticlesListLayout,
 }) {
   const magazinTheme = {
     '--article-width': '700px',
@@ -36,7 +36,8 @@ export default function Article({
     '--article-border': 'none',
   }
 
-  const theme = useArticleMagazinLayout ? magazinTheme : gridTheme
+  const theme = useArticlesListLayout ? magazinTheme : gridTheme
+  // eslint-disable-next-line array-callback-return
   Object.keys(theme).map(key => {
     const value = theme[key]
     document.documentElement.style.setProperty(key, value)
@@ -66,11 +67,11 @@ export default function Article({
       className={styles.clapsIconItem}
       handleClapClick={handleClapClick}
       id={id}
-      changeSvgColor={useArticleMagazinLayout}
+      changeSvgColor={useArticlesListLayout}
     />
   )
 
-  if (useArticleMagazinLayout) {
+  if (useArticlesListLayout) {
     return (
       <div key={id} className={styles.articleContainer}>
         <User

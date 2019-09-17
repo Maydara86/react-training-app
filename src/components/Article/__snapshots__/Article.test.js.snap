@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleOne with \`useArticleMagazinLayout\` NOT set renders correctly when \`useArticleMagazinLayout\` is not set 1`] = `
+exports[`ArticleOne with \`useArticlesListLayout\` NOT set renders correctly when \`useArticlesListLayout\` is not set 1`] = `
 <div
   className="articleContainer"
 >
@@ -121,7 +121,7 @@ exports[`ArticleOne with \`useArticleMagazinLayout\` NOT set renders correctly w
 </div>
 `;
 
-exports[`ArticleTwo with \`useArticleMagazinLayout\` set renders correctly when \`useArticleMagazinLayout\` is set 1`] = `
+exports[`ArticleTwo with \`useArticlesListLayout\` set renders correctly when \`useArticlesListLayout\` is set 1`] = `
 <div
   className="articleContainer"
 >
