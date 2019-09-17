@@ -1,6 +1,6 @@
 import { createStore, combineReducers } from 'redux'
 import articlesReducer from './reducers/articlesReducer'
-import usersReducer from './reducers/usersReducers'
+import usersReducer from './reducers/usersReducer'
 import usersData from '../data/users-data.json'
 import articlesData from '../data/articles-data.json'
 
