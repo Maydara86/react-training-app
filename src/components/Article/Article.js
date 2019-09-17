@@ -9,13 +9,40 @@ export default function Article({
   articleName,
   claps,
   bookmark,
+  responses,
+  content,
+  user,
+  didClap,
   handleClapClick,
   handleBookmarkClick,
   handleStarClick,
   handleFollowClick,
-  didClap,
-  user,
+  useArticlesListLayout,
 }) {
+  const magazinTheme = {
+    '--article-width': '700px',
+    '--article-height': '640px',
+    '--article-title-color': 'black',
+    '--article-title-fontweight': 'bold',
+    '--article-title-size': '30px',
+    '--article-border': 'solid',
+  }
+
+  const gridTheme = {
+    '--article-width': '400px',
+    '--article-height': '440px',
+    '--article-title-color': 'rgba(0, 0, 0, 0.84)',
+    '--article-title-fontweight': '500',
+    '--article-border': 'none',
+  }
+
+  const theme = useArticlesListLayout ? magazinTheme : gridTheme
+  // eslint-disable-next-line array-callback-return
+  Object.keys(theme).map(key => {
+    const value = theme[key]
+    document.documentElement.style.setProperty(key, value)
+  })
+
   const bookmarkFilled = (
     <BookmarkFilled
       className={styles.bookmarkIconItem}
@@ -36,9 +63,41 @@ export default function Article({
     <ClapFilled className={styles.clapsIconItem} handleClapClick={handleClapClick} id={id} />
   )
   const clapUnfilled = (
-    <ClapUnfilled className={styles.clapsIconItem} handleClapClick={handleClapClick} id={id} />
+    <ClapUnfilled
+      className={styles.clapsIconItem}
+      handleClapClick={handleClapClick}
+      id={id}
+      changeSvgColor={useArticlesListLayout}
+    />
   )
 
+  if (useArticlesListLayout) {
+    return (
+      <div key={id} className={styles.articleContainer}>
+        <User
+          className={styles.authorItem}
+          {...user}
+          useSimplifiedLayout
+          handleFollowClick={handleFollowClick}
+          handleStarClick={handleStarClick}
+        />
+        <img src={myImage} alt={articleName} className={styles.articleImageItem} />
+        <h3 className={styles.articleTitleItem}>{articleName}</h3>
+        <p>{content}</p>
+        <span className={styles.readMore}>Read more...</span>
+        <div className={styles.appreciation}>
+          <div className={styles.claps}>
+            {didClap ? clapFilled : clapUnfilled}
+            <span className={styles.clapsNumber}>{claps}</span>
+          </div>
+          <div className={styles.responses}>
+            <div className={styles.responsesNumber}>{responses} responses</div>
+            {bookmark ? bookmarkFilled : bookmarkUnfilled}
+          </div>
+        </div>
+      </div>
+    )
+  }
   return (
     <div key={id} className={styles.articleContainer}>
       <img src={myImage} alt={articleName} className={styles.articleImageItem} />

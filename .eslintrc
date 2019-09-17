@@ -12,6 +12,7 @@
         }],
         "prefer-promise-reject-errors": ["off"],
         "import/prefer-default-export": "off",
+        "array-callback-return": "warn",
         "react/prop-types": ["off"],
         "no-return-assign": ["off"],
         "no-param-reassign": ["off"],
@@ -38,7 +39,7 @@
                 "singleQuote": true,
                 "printWidth": 100,
                 "semi": false,
-                "tabWidth": 2,
+                "tabWidth": 2
             }
         ]
     },

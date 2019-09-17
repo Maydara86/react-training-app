@@ -22,7 +22,8 @@
   align-items: stretch;
   height: 70px;
   width: 320px;
-  }
+  min-height: min-content;
+}
 
 .smallUserImageItem:nth-child(1) {
   -webkit-order: 0;
@@ -99,7 +100,7 @@
   align-items: stretch;
   height: 100px;
   width: 320px;
-  }
+}
 
 .userImageItem:nth-child(1) {
   -webkit-order: 0;

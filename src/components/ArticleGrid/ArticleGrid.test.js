@@ -28,7 +28,7 @@ describe('ArticleGrid', () => {
     expect(articleGridRender).toMatchSnapshot()
   })
 
-  xit('renders correctly using jest renderer', () => {
+  it('renders correctly using jest renderer', () => {
     const tree = renderer.create(<ArticleGrid />).toJSON()
     expect(tree).toMatchSnapshot()
   })

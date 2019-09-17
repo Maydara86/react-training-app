@@ -3,8 +3,7 @@ import './App.css'
 import usersData from './data/users-data.json'
 import articlesData from './data/articles-data.json'
 import Article from './components/Article/Article'
-import ArticleGrid from './components/ArticleGrid/ArticleGrid'
-// import User from './components/User/User'
+import ArticlesList from './components/ArticlesList/ArticlesList'
 
 export default class App extends React.Component {
   constructor() {
@@ -74,17 +73,7 @@ export default class App extends React.Component {
 
     return (
       <div>
-        {/* {users.map(user => {
-          return (
-            <User
-              {...user}
-              key={user.id}
-              handleFollowClick={this.clickFollowHandler}
-              handleStarClick={this.clickStarHandler}
-            />
-          )
-        })} */}
-        <ArticleGrid>
+        <ArticlesList>
           {articles.map((article, i) => {
             return (
               <Article
@@ -95,10 +84,11 @@ export default class App extends React.Component {
                 handleBookmarkClick={this.clickBookmarkHandler}
                 handleFollowClick={this.clickFollowHandler}
                 handleStarClick={this.clickStarHandler}
+                useArticlesListLayout
               />
             )
           })}
-        </ArticleGrid>
+        </ArticlesList>
       </div>
     )
   }
