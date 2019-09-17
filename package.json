@@ -57,7 +57,8 @@
       "!src/enzyme.js",
       "!src/serviceWorker.js",
       "!src/index.js",
-      "!src/index.test.js"
+      "!src/index.test.js",
+      "!src/store/index.js"
     ]
   }
 }
