@@ -17,8 +17,8 @@ describe('Articles Reducer', () => {
 
   describe('Default state tests', () => {
     it('Should return default state', () => {
-      const newState = articlesReducer(undefined, {})
-      expect(newState).toEqual({})
+      const newState = articlesReducer(undefined, [])
+      expect(newState).toEqual([])
     })
 
     it('Should return default state when receiving `TOGGLE_BOOKMARK_ICON`', () => {

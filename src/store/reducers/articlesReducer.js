@@ -1,6 +1,6 @@
 import { TOGGLE_BOOKMARK_ICON, TOGGLE_CLAP_ICON } from '../actions/articlesAction'
 
-const articlesReducer = (state = {}, { type, payload }) => {
+const articlesReducer = (state = [], { type, payload }) => {
   switch (type) {
     case TOGGLE_BOOKMARK_ICON:
       return state.map(article => {

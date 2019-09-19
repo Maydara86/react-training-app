@@ -1,6 +1,6 @@
 import { TOGGLE_STAR_ICON, CLICK_FOLLOW_BUTTON } from '../actions/usersAction'
 
-const usersReducer = (state = {}, { type, payload }) => {
+const usersReducer = (state = [], { type, payload }) => {
   switch (type) {
     case TOGGLE_STAR_ICON:
       return state.map(user => {
