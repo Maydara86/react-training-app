@@ -1,7 +1,4 @@
-/* ############ SMALL USER CONTAINER ########### */
-
-
-.smallUserContainer {
+.userContainer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -25,7 +22,7 @@
   min-height: min-content;
 }
 
-.smallUserImageItem:nth-child(1) {
+.userImageItem:nth-child(1) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -40,7 +37,7 @@
   width: 60px;
 }
 
-.smallUserInfoItem:nth-child(2) {
+.userInfoItem:nth-child(2) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -54,9 +51,7 @@
   font-weight: 300;
 }
 
-
-
-.smallContentContainerRow1 {
+.contentContainerRow1 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -78,8 +73,7 @@
 
 /* ################## BIG USER CONTAINER ################ */
 
-
-.userContainer {
+#userWithFollowButton.userContainer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -102,7 +96,7 @@
   width: 320px;
 }
 
-.userImageItem:nth-child(1) {
+#userWithFollowButton.userImageItem:nth-child(1) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -117,7 +111,7 @@
   width: 90px;
 }
 
-.userInfoItem:nth-child(2) {
+#userWithFollowButton.userInfoItem:nth-child(2) {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -133,7 +127,7 @@
 
 
 
-.contentContainerRow1 {
+#userWithFollowButton.contentContainerRow1 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -151,6 +145,8 @@
   align-content: stretch;
   margin-top: 20px;
 }
+
+/* ################## BIG USER CONTAINER END ################ */
 
 .nameItem:nth-child(1) {
   -webkit-order: 0;

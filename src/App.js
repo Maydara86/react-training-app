@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Article from './components/Article/Article'
 import ArticlesList from './components/ArticlesList/ArticlesList'
+import UserWithFollowButton from './components/User/UserWithFollowButton'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
 import usersSelector from './selectors/users'
@@ -23,7 +24,33 @@ function App(props) {
 
   return (
     <div>
-      <ArticlesList>
+      {users.map(user => {
+        return (
+          <UserWithFollowButton
+            user={user}
+            key={user.id}
+            handleFollowClick={clickFollowHandler}
+            handleStarClick={clickStarHandler}
+          />
+        )
+      })}
+      {/* <ArticleGrid>
+          {articles.map((article, i) => {
+            return (
+              <Article
+                key={article.id}
+                {...article}
+                user={users[i]}
+                handleClapClick={this.clickClapHandler}
+                handleBookmarkClick={this.clickBookmarkHandler}
+                handleFollowClick={this.clickFollowHandler}
+                handleStarClick={this.clickStarHandler}
+              />
+            )
+          })}
+        </ArticleGrid> */}
+
+      {/* <ArticlesList>
         {articles.map((article, i) => {
           return (
             <Article
@@ -38,7 +65,7 @@ function App(props) {
             />
           )
         })}
-      </ArticlesList>
+      </ArticlesList> */}
     </div>
   )
 }
