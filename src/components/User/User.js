@@ -4,10 +4,24 @@ import { Star } from '../Svg/Svg'
 import styles from './User.module.css'
 import myImage from '../../assets/images/avatar.png'
 
-const User = ({ id, name, date, isStarred, handleStarClick, readingTime }) => {
+const getClassName = (prefix, className) => {
+  const myClass = `${prefix}${className}`
+  return myClass.charAt(0).toLowerCase() + myClass.slice(1)
+}
+
+const User = ({
+  id,
+  name,
+  date,
+  isStarred,
+  handleStarClick,
+  readingTime,
+  classPrefix = 'small',
+}) => {
   const starColor = isStarred ? 'gold' : 'grey'
+  console.log(getClassName(classPrefix, 'UserContainer'))
   return (
-    <div className={styles.smallUserContainer} key={id}>
+    <div className={styles.getClassName(classPrefix, 'UserContainer')} key={id}>
       <img className={styles.smallUserImageItem} src={myImage} alt={name} />
       <div className={styles.smallUserInfoItem}>
         <div className={styles.smallContentContainerRow1}>
