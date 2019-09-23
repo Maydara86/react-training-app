@@ -1,53 +1,33 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import renderer from 'react-test-renderer'
-import { shallow } from './enzyme'
+import configureStore from 'redux-mock-store'
 import App from './App'
+import usersData from './data/__mocks__/users-data.json'
+import articlesData from './data/__mocks__/articles-data.json'
 
-jest.mock('./data/users-data.json')
+const mockStore = configureStore([])
 
-const AppComponent = shallow(<App />)
-const wrapper = AppComponent.instance()
+describe('My Connected React-Redux Component', () => {
+  let store
+  let component
 
-describe('App Component', () => {
-  describe('App Snapshots', () => {
-    it('renders correctly when the `state` is empty', () => {
-      expect(AppComponent).toMatchSnapshot()
+  beforeEach(() => {
+    store = mockStore({
+      articles: articlesData,
+      users: usersData,
     })
 
-    it('renders correctly when there is `state`', () => {
-      const tree = renderer.create(<App />).toJSON()
-      expect(tree).toMatchSnapshot()
-    })
+    store.dispatch = jest.fn()
+
+    component = renderer.create(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
   })
 
-  it('testing clickFollowHandler method to have the expected effect on the state of the first user', () => {
-    wrapper.clickFollowHandler('5d552d0058f193f2795fc814')
-    expect(wrapper.state.users[0].isFollowed).toBeFalsy()
-  })
-
-  it('clickFollowHandler method have the expected effect on the state of the second user', () => {
-    wrapper.clickFollowHandler('5d552d00b20b141dff10d2a2')
-    expect(wrapper.state.users[1].isFollowed).toBeTruthy()
-  })
-
-  it('clickStarHandler method to have the expected effect on the state of the first user', () => {
-    wrapper.clickStarHandler('5d552d0058f193f2795fc814')
-    expect(wrapper.state.users[0].isStarred).toBeTruthy()
-  })
-
-  it('calling the clickStarHandler method has the expected effect on the state of the second user', () => {
-    wrapper.clickStarHandler('5d552d00b20b141dff10d2a2')
-    expect(wrapper.state.users[1].isStarred).toBeFalsy()
-  })
-
-  it('checks the clickClapHandler method', () => {
-    wrapper.clickClapHandler('5d66ae9445543ffea5167d5e')
-    expect(wrapper.state.articles[1].claps).toEqual(71)
-    expect(wrapper.state.articles[1].didClap).toBeTruthy()
-  })
-
-  it('checks the clickBookmarkHandler method', () => {
-    wrapper.clickBookmarkHandler('5d66ae9445543ffea5167d5e')
-    expect(wrapper.state.articles[1].bookmark).toBeTruthy()
+  it('should render with given state from Redux store', () => {
+    expect(component.toJSON()).toMatchSnapshot()
   })
 })

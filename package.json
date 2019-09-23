@@ -5,8 +5,11 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
     "react-scripts": "3.1.1",
-    "react-test-renderer": "^16.9.0"
+    "react-test-renderer": "^16.9.0",
+    "redux": "^4.0.4",
+    "reselect": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,7 +47,8 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "jest": "^24.8.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "redux-mock-store": "^1.5.3"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -53,7 +57,7 @@
       "!src/enzyme.js",
       "!src/serviceWorker.js",
       "!src/index.js",
-      "!src/index.test.js"
+      "!src/store/index.js"
     ]
   }
 }
