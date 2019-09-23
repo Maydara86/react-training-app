@@ -1,95 +1,63 @@
 import React from 'react'
 import './App.css'
-import usersData from './data/users-data.json'
-import articlesData from './data/articles-data.json'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import Article from './components/Article/Article'
 import ArticlesList from './components/ArticlesList/ArticlesList'
+import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
+import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
+import usersSelector from './selectors/users'
+import articlesSelector from './selectors/articles'
 
-export default class App extends React.Component {
-  constructor() {
-    super()
-    this.state = { users: usersData, articles: articlesData }
-    this.clickFollowHandler = this.clickFollowHandler.bind(this)
-    this.clickStarHandler = this.clickStarHandler.bind(this)
-    this.clickClapHandler = this.clickClapHandler.bind(this)
-    this.clickBookmarkHandler = this.clickBookmarkHandler.bind(this)
-  }
+function App(props) {
+  /* eslint-disable no-shadow */
+  const {
+    users,
+    articles,
+    clickClapHandler,
+    clickBookmarkHandler,
+    clickStarHandler,
+    clickFollowHandler,
+  } = props
+  /* eslint-disable no-shadow */
 
-  clickFollowHandler(id) {
-    this.setState(prevState => {
-      const updatedUsers = prevState.users.map(user => {
-        if (user.id === id) {
-          user.isFollowed = !user.isFollowed
-        }
-        return user
-      })
-      return {
-        users: updatedUsers,
-      }
-    })
-  }
+  return (
+    <div>
+      <ArticlesList>
+        {articles.map((article, i) => {
+          return (
+            <Article
+              key={article.id}
+              {...article}
+              user={users[i]}
+              handleClapClick={clickClapHandler}
+              handleBookmarkClick={clickBookmarkHandler}
+              handleFollowClick={clickFollowHandler}
+              handleStarClick={clickStarHandler}
+              useArticlesListLayout
+            />
+          )
+        })}
+      </ArticlesList>
+    </div>
+  )
+}
 
-  clickStarHandler(id) {
-    this.setState(prevState => {
-      const updatedUsers = prevState.users.map(user => {
-        if (user.id === id) {
-          user.isStarred = !user.isStarred
-        }
-        return user
-      })
-      return {
-        users: updatedUsers,
-      }
-    })
-  }
-
-  clickClapHandler(id) {
-    this.setState(prevState => {
-      const updatedArticles = prevState.articles.map(a => {
-        if (a.id === id) {
-          a.claps += 1
-          a.didClap = true
-        }
-        return a
-      })
-      return { articles: updatedArticles }
-    })
-  }
-
-  clickBookmarkHandler(id) {
-    this.setState(prevState => {
-      const updatedArticles = prevState.articles.map(a => {
-        if (a.id === id) {
-          a.bookmark = !a.bookmark
-        }
-        return a
-      })
-      return { articles: updatedArticles }
-    })
-  }
-
-  render() {
-    const { users, articles } = this.state
-
-    return (
-      <div>
-        <ArticlesList>
-          {articles.map((article, i) => {
-            return (
-              <Article
-                key={article.id}
-                {...article}
-                user={users[i]}
-                handleClapClick={this.clickClapHandler}
-                handleBookmarkClick={this.clickBookmarkHandler}
-                handleFollowClick={this.clickFollowHandler}
-                handleStarClick={this.clickStarHandler}
-                useArticlesListLayout
-              />
-            )
-          })}
-        </ArticlesList>
-      </div>
-    )
+const mapStateToProps = state => {
+  return {
+    articles: articlesSelector(state),
+    users: usersSelector(state),
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    { clickStarHandler, clickBookmarkHandler, clickClapHandler, clickFollowHandler },
+    dispatch
+  )
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)

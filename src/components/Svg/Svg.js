@@ -13,6 +13,7 @@ const gridTheme = {
 
 const applyTheme = changeSvgColor => {
   const theme = changeSvgColor ? magazinTheme : gridTheme
+  // eslint-disable-next-line array-callback-return
   Object.keys(theme).map(key => {
     const value = theme[key]
     document.documentElement.style.setProperty(key, value)
