@@ -1,10 +1,10 @@
 import React from 'react'
 import User from './User'
-import styles from './User.module.css'
+import styles from './UserWithFollowButton.module.css'
 
 const UserWithFollowButton = ({ user, handleFollowClick, handleStarClick }) => {
   return (
-    <User id="userWithFollowButton" {...user} handleStarClick={handleStarClick}>
+    <User styles={styles} {...user} handleStarClick={handleStarClick}>
       <button className={styles.followItem} onClick={() => handleFollowClick(user.id)}>
         {user.isFollowed ? 'Unfollow' : 'Follow'}
       </button>

@@ -50,7 +50,7 @@ function App(props) {
           })}
         </ArticleGrid> */}
 
-      {/* <ArticlesList>
+      <ArticlesList>
         {articles.map((article, i) => {
           return (
             <Article
@@ -65,7 +65,7 @@ function App(props) {
             />
           )
         })}
-      </ArticlesList> */}
+      </ArticlesList>
     </div>
   )
 }

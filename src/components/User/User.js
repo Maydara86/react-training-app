@@ -1,10 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Star } from '../Svg/Svg'
-import styles from './User.module.css'
+import classes from './User.module.css'
 import myImage from '../../assets/images/avatar.png'
 
-const User = ({ id, name, date, isStarred, handleStarClick, readingTime, children }) => {
+const User = ({
+  id,
+  name,
+  date,
+  isStarred,
+  handleStarClick,
+  readingTime,
+  children,
+  styles = classes,
+}) => {
   const starColor = isStarred ? 'gold' : 'grey'
   return (
     <div className={styles.userContainer} key={id}>
