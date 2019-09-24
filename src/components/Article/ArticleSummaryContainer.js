@@ -4,7 +4,7 @@ import myImage from '../../assets/images/article.jpeg'
 import User from '../User/User'
 import { ClapFilled, ClapUnfilled, BookmarkFilled, BookmarkUnfilled } from '../Svg/Svg'
 
-export default function Article({
+export default function ArticleSummaryContainer({
   id,
   articleName,
   claps,

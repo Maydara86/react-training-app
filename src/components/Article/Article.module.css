@@ -269,6 +269,8 @@ p {
     -ms-flex-item-align: auto;
     align-self: auto;
     margin: 3px 0 0 10px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.54);
 }
 
 .separatorItem:nth-child(3) {

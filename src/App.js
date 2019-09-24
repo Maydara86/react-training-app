@@ -2,8 +2,9 @@ import React from 'react'
 import './App.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Article from './components/Article/Article'
+import ArticleSummaryContainer from './components/Article/ArticleSummaryContainer'
 import ArticlesList from './components/ArticlesList/ArticlesList'
+import ArticleGrid from './components/ArticleGrid/ArticleGrid'
 import UserWithFollowButton from './components/User/UserWithFollowButton'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
@@ -24,7 +25,7 @@ function App(props) {
 
   return (
     <div>
-      {users.map(user => {
+      {/* {users.map(user => {
         return (
           <UserWithFollowButton
             user={user}
@@ -33,27 +34,27 @@ function App(props) {
             handleStarClick={clickStarHandler}
           />
         )
-      })}
-      {/* <ArticleGrid>
-          {articles.map((article, i) => {
-            return (
-              <Article
-                key={article.id}
-                {...article}
-                user={users[i]}
-                handleClapClick={this.clickClapHandler}
-                handleBookmarkClick={this.clickBookmarkHandler}
-                handleFollowClick={this.clickFollowHandler}
-                handleStarClick={this.clickStarHandler}
-              />
-            )
-          })}
-        </ArticleGrid> */}
-
-      <ArticlesList>
+      })} */}
+      <ArticleGrid>
         {articles.map((article, i) => {
           return (
-            <Article
+            <ArticleSummaryContainer
+              key={article.id}
+              {...article}
+              user={users[i]}
+              handleClapClick={clickClapHandler}
+              handleBookmarkClick={clickBookmarkHandler}
+              handleFollowClick={clickFollowHandler}
+              handleStarClick={clickStarHandler}
+            />
+          )
+        })}
+      </ArticleGrid>
+
+      {/* <ArticlesList>
+        {articles.map((article, i) => {
+          return (
+            <ArticleSummaryContainer
               key={article.id}
               {...article}
               user={users[i]}
@@ -65,7 +66,7 @@ function App(props) {
             />
           )
         })}
-      </ArticlesList>
+      </ArticlesList> */}
     </div>
   )
 }
