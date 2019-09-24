@@ -73,7 +73,7 @@
 
 /* ################## BIG USER CONTAINER ################ */
 
-#userWithFollowButton.userContainer {
+/* #userWithFollowButton.userContainer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -144,7 +144,7 @@
   -ms-flex-line-pack: stretch;
   align-content: stretch;
   margin-top: 20px;
-}
+} */
 
 /* ################## BIG USER CONTAINER END ################ */
 
