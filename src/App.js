@@ -3,7 +3,7 @@ import './App.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ArticleSummaryContainer from './components/Article/ArticleSummaryContainer'
-import ArticlesList from './components/ArticlesList/ArticlesList'
+import ArticleSummaryListItem from './components/ArticlesList/ArticleSummaryListItem'
 import ArticleSummaryGridCard from './components/ArticleGrid/ArticleSummaryGridCard'
 import UserWithFollowButton from './components/User/UserWithFollowButton'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
@@ -35,7 +35,7 @@ function App(props) {
           />
         )
       })} */}
-      <div className="articleSummaryGridContainer">
+      {/* <div className="articleSummaryGridContainer">
         {articles.map((article, i) => {
           return (
             <ArticleSummaryGridCard
@@ -49,12 +49,13 @@ function App(props) {
             />
           )
         })}
-      </div>
+      </div> */}
 
-      {/* <ArticlesList>
+      <div className="ListContainer">
         {articles.map((article, i) => {
           return (
-            <ArticleSummaryContainer
+            <ArticleSummaryListItem
+              className="ListItem"
               key={article.id}
               {...article}
               user={users[i]}
@@ -66,7 +67,7 @@ function App(props) {
             />
           )
         })}
-      </ArticlesList> */}
+      </div>
     </div>
   )
 }
