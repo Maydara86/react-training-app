@@ -2,18 +2,18 @@
 
 exports[`checks if the User is called from an article 1`] = `
 <div
-  className="smallUserContainer"
+  className="userContainer"
 >
   <img
     alt="Walton Morton"
-    className="smallUserImageItem"
+    className="userImageItem"
     src="avatar.png"
   />
   <div
-    className="smallUserInfoItem"
+    className="userInfoItem"
   >
     <div
-      className="smallContentContainerRow1"
+      className="contentContainerRow1"
     >
       <div
         className="nameItem"
@@ -81,12 +81,6 @@ exports[`renders correctly when there is one user 1`] = `
       >
         Walton Morton
       </div>
-      <button
-        className="followItem"
-        onClick={[Function]}
-      >
-        Unfollow
-      </button>
     </div>
     <div
       className="contentContainerRow2"
