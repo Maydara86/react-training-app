@@ -17,7 +17,6 @@ export default function ArticleSummaryListItem({
   handleBookmarkClick,
   handleStarClick,
   handleFollowClick,
-  useArticlesListLayout,
 }) {
   const ListTheme = {
     '--article-width': '700px',
@@ -58,7 +57,7 @@ export default function ArticleSummaryListItem({
       className={styles.clapsIconItem}
       handleClapClick={handleClapClick}
       id={id}
-      changeSvgColor={useArticlesListLayout}
+      changeSvgColor
     />
   )
 

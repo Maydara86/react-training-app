@@ -15,7 +15,6 @@ export default function ArticleSummaryGridCard({
   handleBookmarkClick,
   handleStarClick,
   handleFollowClick,
-  useArticlesListLayout,
 }) {
   const gridTheme = {
     '--article-width': '400px',
@@ -39,6 +38,7 @@ export default function ArticleSummaryGridCard({
       id={id}
     />
   )
+
   const bookmarkUnfilled = (
     <BookmarkUnfilled
       className={styles.bookmarkIconItem}
@@ -47,16 +47,13 @@ export default function ArticleSummaryGridCard({
       id={id}
     />
   )
+
   const clapFilled = (
     <ClapFilled className={styles.clapsIconItem} handleClapClick={handleClapClick} id={id} />
   )
+
   const clapUnfilled = (
-    <ClapUnfilled
-      className={styles.clapsIconItem}
-      handleClapClick={handleClapClick}
-      id={id}
-      changeSvgColor={useArticlesListLayout}
-    />
+    <ClapUnfilled className={styles.clapsIconItem} handleClapClick={handleClapClick} id={id} />
   )
 
   return (
