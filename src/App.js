@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ArticleSummaryContainer from './components/Article/ArticleSummaryContainer'
 import ArticlesList from './components/ArticlesList/ArticlesList'
-import ArticleGrid from './components/ArticleGrid/ArticleGrid'
+import ArticleSummaryGridCard from './components/ArticleGrid/ArticleSummaryGridCard'
 import UserWithFollowButton from './components/User/UserWithFollowButton'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
@@ -35,10 +35,10 @@ function App(props) {
           />
         )
       })} */}
-      <ArticleGrid>
+      <div className="articleSummaryGridContainer">
         {articles.map((article, i) => {
           return (
-            <ArticleSummaryContainer
+            <ArticleSummaryGridCard
               key={article.id}
               {...article}
               user={users[i]}
@@ -49,7 +49,7 @@ function App(props) {
             />
           )
         })}
-      </ArticleGrid>
+      </div>
 
       {/* <ArticlesList>
         {articles.map((article, i) => {
