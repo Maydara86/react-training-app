@@ -43,7 +43,7 @@ exports[`checks if the User is called from an article 1`] = `
         style={
           Object {
             "cursor": "pointer",
-            "fill": "gold",
+            "fill": "grey",
             "height": 15,
             "marginTop": 4,
             "padding": 4,
@@ -104,7 +104,7 @@ exports[`renders correctly when there is one user 1`] = `
         style={
           Object {
             "cursor": "pointer",
-            "fill": "gold",
+            "fill": "grey",
             "height": 15,
             "marginTop": 4,
             "padding": 4,

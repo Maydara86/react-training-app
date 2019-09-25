@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { shallow } from '../../enzyme'
-import Article from './Article'
+import ArticleSummaryListItem from './ArticleSummaryListItem'
 import { ClapUnfilled, ClapFilled, BookmarkUnfilled, BookmarkFilled } from '../Svg/Svg'
 import users from '../../data/users-data.json'
 import articles from '../../data/articles-data.json'
@@ -9,17 +9,22 @@ import articles from '../../data/articles-data.json'
 jest.mock('../../data/articles-data.json')
 jest.mock('../../data/users-data.json')
 
-const ArticleOne = shallow(
-  <Article handleFollowClick={() => {}} handleStarClick={() => {}} useArticlesListLayout />
+const ArticleTwo = shallow(
+  <ArticleSummaryListItem
+    {...articles[0]}
+    user={users[0]}
+    handleFollowClick={() => {}}
+    handleStarClick={() => {}}
+    handleClapClick={() => {}}
+    handleBookmarkClick={() => {}}
+  />
 )
-
-const ArticleTwo = shallow(<Article handleFollowClick={() => {}} handleStarClick={() => {}} />)
 
 describe('ArticleOne with `useArticlesListLayout` NOT set', () => {
   it('renders correctly when `useArticlesListLayout` is not set', () => {
     const tree = renderer
       .create(
-        <Article
+        <ArticleSummaryListItem
           {...articles[0]}
           user={users[0]}
           handleClapClick={() => {}}
@@ -92,14 +97,13 @@ describe('ArticleTwo with `useArticlesListLayout` set', () => {
   it('renders correctly when `useArticlesListLayout` is set', () => {
     const tree = renderer
       .create(
-        <Article
+        <ArticleSummaryListItem
           {...articles[0]}
           user={users[0]}
           handleClapClick={() => {}}
           handleBookmarkClick={() => {}}
           handleFollowClick={() => {}}
           handleStarClick={() => {}}
-          useArticlesListLayout
         />
       )
       .toJSON()
@@ -107,12 +111,16 @@ describe('ArticleTwo with `useArticlesListLayout` set', () => {
   })
 
   describe('checks bookmark ternary', () => {
-    beforeEach(() => {
-      ArticleTwo.setProps({ bookmark: true })
-    })
+    ArticleTwo.setProps({ bookmark: true })
 
     it('renders BookmarkFilled component', () => {
       expect(ArticleTwo.find('BookmarkFilled').exists()).toBeTruthy()
+    })
+
+    ArticleTwo.setProps({ bookmark: false })
+
+    it('renders BookmarkUnfilled component', () => {
+      expect(ArticleTwo.find('BookmarkUnfilled').exists()).toBeTruthy()
     })
   })
 

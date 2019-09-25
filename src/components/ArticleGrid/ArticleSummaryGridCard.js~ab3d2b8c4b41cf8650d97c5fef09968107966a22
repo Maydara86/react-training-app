@@ -1,16 +1,14 @@
 import React from 'react'
-import styles from './Article.module.css'
-import myImage from '../../assets/images/article.jpeg'
 import User from '../User/User'
+import myImage from '../../assets/images/article.jpeg'
 import { ClapFilled, ClapUnfilled, BookmarkFilled, BookmarkUnfilled } from '../Svg/Svg'
+import styles from './ArticleGrid.module.css'
 
-export default function ArticleSummaryContainer({
+export default function ArticleSummaryGridCard({
   id,
   articleName,
   claps,
   bookmark,
-  responses,
-  content,
   user,
   didClap,
   handleClapClick,
@@ -19,15 +17,6 @@ export default function ArticleSummaryContainer({
   handleFollowClick,
   useArticlesListLayout,
 }) {
-  const magazinTheme = {
-    '--article-width': '700px',
-    '--article-height': '640px',
-    '--article-title-color': 'black',
-    '--article-title-fontweight': 'bold',
-    '--article-title-size': '30px',
-    '--article-border': 'solid',
-  }
-
   const gridTheme = {
     '--article-width': '400px',
     '--article-height': '440px',
@@ -36,10 +25,9 @@ export default function ArticleSummaryContainer({
     '--article-border': 'none',
   }
 
-  const theme = useArticlesListLayout ? magazinTheme : gridTheme
   // eslint-disable-next-line array-callback-return
-  Object.keys(theme).map(key => {
-    const value = theme[key]
+  Object.keys(gridTheme).map(key => {
+    const value = gridTheme[key]
     document.documentElement.style.setProperty(key, value)
   })
 
@@ -71,33 +59,6 @@ export default function ArticleSummaryContainer({
     />
   )
 
-  if (useArticlesListLayout) {
-    return (
-      <div key={id} className={styles.articleContainer}>
-        <User
-          className={styles.authorItem}
-          {...user}
-          useSimplifiedLayout
-          handleFollowClick={handleFollowClick}
-          handleStarClick={handleStarClick}
-        />
-        <img src={myImage} alt={articleName} className={styles.articleImageItem} />
-        <h3 className={styles.articleTitleItem}>{articleName}</h3>
-        <p>{content}</p>
-        <span className={styles.readMore}>Read more...</span>
-        <div className={styles.appreciation}>
-          <div className={styles.claps}>
-            {didClap ? clapFilled : clapUnfilled}
-            <span className={styles.clapsNumber}>{claps}</span>
-          </div>
-          <div className={styles.responses}>
-            <div className={styles.responsesNumber}>{responses} responses</div>
-            {bookmark ? bookmarkFilled : bookmarkUnfilled}
-          </div>
-        </div>
-      </div>
-    )
-  }
   return (
     <div key={id} className={styles.articleContainer}>
       <img src={myImage} alt={articleName} className={styles.articleImageItem} />
@@ -107,7 +68,6 @@ export default function ArticleSummaryContainer({
           <User
             className={styles.authorItem}
             {...user}
-            useSimplifiedLayout
             handleFollowClick={handleFollowClick}
             handleStarClick={handleStarClick}
           />

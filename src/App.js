@@ -63,7 +63,6 @@ function App(props) {
               handleBookmarkClick={clickBookmarkHandler}
               handleFollowClick={clickFollowHandler}
               handleStarClick={clickStarHandler}
-              useArticlesListLayout
             />
           )
         })}
