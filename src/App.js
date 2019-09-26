@@ -35,7 +35,8 @@ function App(props) {
           />
         )
       })} */}
-      {/* <div className="articleSummaryGridContainer">
+
+      <div className="articleSummaryGridContainer">
         {articles.map((article, i) => {
           return (
             <ArticleSummaryGridCard
@@ -49,9 +50,9 @@ function App(props) {
             />
           )
         })}
-      </div> */}
+      </div>
 
-      <div className="ListContainer">
+      {/* <div className="ListContainer">
         {articles.map((article, i) => {
           return (
             <ArticleSummaryListItem
@@ -66,7 +67,7 @@ function App(props) {
             />
           )
         })}
-      </div>
+      </div> */}
     </div>
   )
 }
