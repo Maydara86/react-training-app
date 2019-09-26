@@ -1,7 +1,7 @@
 import React from 'react'
-import User from '../User/User'
-import myImage from '../../assets/images/article.jpeg'
-import { ClapFilled, ClapUnfilled, BookmarkFilled, BookmarkUnfilled } from '../Svg/Svg'
+import User from '../../User/User'
+import myImage from '../../../assets/images/article.jpeg'
+import { ClapFilled, ClapUnfilled, BookmarkFilled, BookmarkUnfilled } from '../../Svg/Svg'
 import styles from './ArticleSummaryGridCard.module.css'
 
 export default function ArticleSummaryGridCard({

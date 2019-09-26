@@ -1,8 +1,6 @@
 import React from 'react'
 import { shallow } from '../../enzyme'
 import { ClapUnfilled, ClapFilled, BookmarkUnfilled, BookmarkFilled } from './Svg'
-import users from '../../data/users-data.json'
-import articles from '../../data/articles-data.json'
 
 jest.mock('../../data/articles-data.json')
 jest.mock('../../data/users-data.json')

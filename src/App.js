@@ -2,10 +2,7 @@ import React from 'react'
 import './App.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-// import ArticleSummaryContainer from './components/Article/ArticleSummaryContainer'
-import ArticleSummaryListItem from './components/ArticlesList/ArticleSummaryListItem'
-import ArticleSummaryGridCard from './components/ArticleGrid/ArticleSummaryGridCard'
-import UserWithFollowButton from './components/User/UserWithFollowButton'
+import ArticleSummaryListItem from './components/Article/ArticlesList/ArticleSummaryListItem'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
 import usersSelector from './selectors/users'
@@ -25,34 +22,7 @@ function App(props) {
 
   return (
     <div>
-      {/* {users.map(user => {
-        return (
-          <UserWithFollowButton
-            user={user}
-            key={user.id}
-            handleFollowClick={clickFollowHandler}
-            handleStarClick={clickStarHandler}
-          />
-        )
-      })} */}
-
-      <div className="articleSummaryGridContainer">
-        {articles.map((article, i) => {
-          return (
-            <ArticleSummaryGridCard
-              key={article.id}
-              {...article}
-              user={users[i]}
-              handleClapClick={clickClapHandler}
-              handleBookmarkClick={clickBookmarkHandler}
-              handleFollowClick={clickFollowHandler}
-              handleStarClick={clickStarHandler}
-            />
-          )
-        })}
-      </div>
-
-      {/* <div className="ListContainer">
+      <div className="ListContainer">
         {articles.map((article, i) => {
           return (
             <ArticleSummaryListItem
@@ -67,7 +37,7 @@ function App(props) {
             />
           )
         })}
-      </div> */}
+      </div>
     </div>
   )
 }

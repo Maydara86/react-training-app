@@ -1,7 +1,7 @@
 import React from 'react'
-import myImage from '../../assets/images/article.jpeg'
-import User from '../User/User'
-import { ClapFilled, ClapUnfilled, BookmarkFilled, BookmarkUnfilled } from '../Svg/Svg'
+import myImage from '../../../assets/images/article.jpeg'
+import User from '../../User/User'
+import { ClapFilled, ClapUnfilled, BookmarkFilled, BookmarkUnfilled } from '../../Svg/Svg'
 import styles from './ArticleSummaryListItem.module.css'
 
 export default function ArticleSummaryListItem({
