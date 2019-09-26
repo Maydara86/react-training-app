@@ -2,7 +2,8 @@ import React from 'react'
 import './App.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import ArticleSummaryListItem from './components/Article/ArticlesList/ArticleSummaryListItem'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import ArticleSummaryGridCard from './components/Article/ArticleGrid/ArticleSummaryGridCard'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
 import usersSelector from './selectors/users'
@@ -21,24 +22,33 @@ function App(props) {
   /* eslint-disable no-shadow */
 
   return (
-    <div>
-      <div className="ListContainer">
-        {articles.map((article, i) => {
-          return (
-            <ArticleSummaryListItem
-              className="ListItem"
-              key={article.id}
-              {...article}
-              user={users[i]}
-              handleClapClick={clickClapHandler}
-              handleBookmarkClick={clickBookmarkHandler}
-              handleFollowClick={clickFollowHandler}
-              handleStarClick={clickStarHandler}
-            />
-          )
-        })}
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/article-grid" exact component={ArticleSummaryGridCard}>
+            <div className="articleSummaryGridContainer">
+              {articles.map((article, i) => {
+                return (
+                  <ArticleSummaryGridCard
+                    className="ListItem"
+                    key={article.id}
+                    {...article}
+                    user={users[i]}
+                    handleClapClick={clickClapHandler}
+                    handleBookmarkClick={clickBookmarkHandler}
+                    handleFollowClick={clickFollowHandler}
+                    handleStarClick={clickStarHandler}
+                  />
+                )
+              })}
+            </div>
+          </Route>
+        </Switch>
+        <Link to="/article-grid">
+          <h1>Go to the Grid Page</h1>
+        </Link>
       </div>
-    </div>
+    </Router>
   )
 }
 
