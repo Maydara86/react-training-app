@@ -1,16 +1,20 @@
 import React from 'react'
-import styles from './Search.module.css'
+// import styles from './Search.module.css'
 
-const Search = () => {
+export const Search = ({ search, changeSearchHandler }) => {
   return (
-    <div className={styles.flexbox}>
-      <div className={styles.search}>
+    <div>
+      <div>
         <div>
-          <input type="text" placeholder="       Search . . ." required />
+          <input
+            type="text"
+            placeholder="       Search . . ."
+            onChange={changeSearchHandler}
+            value={search}
+            required
+          />
         </div>
       </div>
     </div>
   )
 }
-
-export default Search

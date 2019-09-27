@@ -4,9 +4,10 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import ArticleSummaryGridCard from './components/Article/ArticleGrid/ArticleSummaryGridCard'
-import Search from './components/Search/Search'
+import SearchA, { Search } from './components/Search/Search'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
+import changeSearchHandler from './store/actions/searchAction'
 import usersSelector from './selectors/users'
 import articlesSelector from './selectors/articles'
 
@@ -15,16 +16,22 @@ function App(props) {
   const {
     users,
     articles,
+    search,
     clickClapHandler,
     clickBookmarkHandler,
     clickStarHandler,
     clickFollowHandler,
+    changeSearchHandler,
   } = props
   /* eslint-disable no-shadow */
 
   return (
     <Router>
-      <div>
+      {/* <SearchA /> */}
+      <br />
+      <Search search={search} changeSearchHandler={changeSearchHandler} />
+
+      {/* <div>
         <Switch>
           <Route path="/article-grid" exact component={ArticleSummaryGridCard}>
             <Search />
@@ -49,7 +56,7 @@ function App(props) {
         <Link to="/article-grid">
           <h1>Go to the Grid Page</h1>
         </Link>
-      </div>
+      </div> */}
     </Router>
   )
 }
@@ -58,12 +65,19 @@ const mapStateToProps = state => {
   return {
     articles: articlesSelector(state),
     users: usersSelector(state),
+    search: state.search,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(
-    { clickStarHandler, clickBookmarkHandler, clickClapHandler, clickFollowHandler },
+    {
+      clickStarHandler,
+      clickBookmarkHandler,
+      clickClapHandler,
+      clickFollowHandler,
+      changeSearchHandler,
+    },
     dispatch
   )
 }
