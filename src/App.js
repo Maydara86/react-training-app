@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import ArticleSummaryGridCard from './components/Article/ArticleGrid/ArticleSummaryGridCard'
+import Search from './components/Search/Search'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
 import usersSelector from './selectors/users'
@@ -26,6 +27,7 @@ function App(props) {
       <div>
         <Switch>
           <Route path="/article-grid" exact component={ArticleSummaryGridCard}>
+            <Search />
             <div className="articleSummaryGridContainer">
               {articles.map((article, i) => {
                 return (
