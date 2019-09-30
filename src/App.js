@@ -4,18 +4,18 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import ArticleSummaryGridCard from './components/Article/ArticleGrid/ArticleSummaryGridCard'
-import SearchA, { Search } from './components/Search/Search'
+import Search from './components/Search/Search'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
 import changeSearchHandler from './store/actions/searchAction'
 import usersSelector from './selectors/users'
 import articlesSelector from './selectors/articles'
+import searchSelector from './selectors/search'
 
 function App(props) {
   /* eslint-disable no-shadow */
   const {
     users,
-    articles,
     search,
     clickClapHandler,
     clickBookmarkHandler,
@@ -23,18 +23,23 @@ function App(props) {
     clickFollowHandler,
     changeSearchHandler,
   } = props
+
+  let { articles } = props
   /* eslint-disable no-shadow */
+
+  const searchQuery = search.trim().toLowerCase()
+  if (searchQuery.length > 0) {
+    articles = articles.filter(article => {
+      return article.articleName.toLowerCase().match(searchQuery)
+    })
+  }
 
   return (
     <Router>
-      {/* <SearchA /> */}
-      <br />
-      <Search search={search} changeSearchHandler={changeSearchHandler} />
-
-      {/* <div>
+      <div>
         <Switch>
           <Route path="/article-grid" exact component={ArticleSummaryGridCard}>
-            <Search />
+            <Search search={search} changeSearchHandler={changeSearchHandler} />
             <div className="articleSummaryGridContainer">
               {articles.map((article, i) => {
                 return (
@@ -43,6 +48,7 @@ function App(props) {
                     key={article.id}
                     {...article}
                     user={users[i]}
+                    search={search}
                     handleClapClick={clickClapHandler}
                     handleBookmarkClick={clickBookmarkHandler}
                     handleFollowClick={clickFollowHandler}
@@ -56,7 +62,7 @@ function App(props) {
         <Link to="/article-grid">
           <h1>Go to the Grid Page</h1>
         </Link>
-      </div> */}
+      </div>
     </Router>
   )
 }
@@ -65,7 +71,7 @@ const mapStateToProps = state => {
   return {
     articles: articlesSelector(state),
     users: usersSelector(state),
-    search: state.search,
+    search: searchSelector(state),
   }
 }
 
