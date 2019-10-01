@@ -30,7 +30,10 @@ function App(props) {
   const searchQuery = search.trim().toLowerCase()
   if (searchQuery.length > 0) {
     articles = articles.filter(article => {
-      return article.articleName.toLowerCase().match(searchQuery)
+      return (
+        article.articleName.toLowerCase().match(searchQuery) ||
+        article.content.toLowerCase().match(searchQuery)
+      )
     })
   }
 
