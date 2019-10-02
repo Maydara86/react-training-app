@@ -16,6 +16,7 @@ describe('My Connected React-Redux Component', () => {
     store = mockStore({
       articles: articlesData,
       users: usersData,
+      search: '',
     })
 
     store.dispatch = jest.fn()
