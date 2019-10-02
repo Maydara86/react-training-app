@@ -1,8 +1,29 @@
 [{
-  "id": "5d66ae94690d3b1732e825ac",
-  "articleName": "amet aliqua cupidatat dolore Lorem elit voluptate proident tempor incididunt",
-  "claps": 46,
-  "bookmark": true,
-  "articleImage": "http://placehold.it/32x32",
-  "didClap": false
-}]
+    "id": "5d66ae94690d3b1732e825ac",
+    "articleName": "amet aliqua cupidatat dolore Lorem elit voluptate proident tempor incididunt",
+    "claps": 46,
+    "bookmark": true,
+    "articleImage": "http://placehold.it/32x32",
+    "didClap": false
+  },
+  {
+    "id": "5d66ae94c25c806ad478b2ab",
+    "articleName": "magna eiusmod cupidatat nisi excepteur esse non fugiat labore consectetur",
+    "claps": 88,
+    "bookmark": false,
+    "articleImage": "http://placehold.it/32x32",
+    "didClap": false,
+    "content": "nisi excepteur eiusmod Lorem id in nisi tempor ex anim 4",
+    "responses": 3
+  },
+  {
+    "id": "5d66ae94a1b34ddf6249668b",
+    "articleName": "laboris incididunt fugiat occaecat excepteur Lorem Lorem exercitation deserunt esse",
+    "claps": 44,
+    "bookmark": false,
+    "articleImage": "http://placehold.it/32x32",
+    "didClap": false,
+    "content": "nisi excepteur eiusmod Lorem id in nisi tempor ex anim 10",
+    "responses": 3
+  }
+]
