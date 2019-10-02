@@ -41,6 +41,18 @@ function App(props) {
     <Router>
       <div>
         <Switch>
+          <Route
+            path="/"
+            exact
+            strict
+            render={() => {
+              return (
+                <Link to="/article-grid">
+                  <h1>Go to the Grid Page</h1>
+                </Link>
+              )
+            }}
+          />
           <Route path="/article-grid" exact component={ArticleSummaryGridCard}>
             <Search search={search} changeSearchHandler={changeSearchHandler} />
             <div className="articleSummaryGridContainer">
@@ -62,9 +74,6 @@ function App(props) {
             </div>
           </Route>
         </Switch>
-        <Link to="/article-grid">
-          <h1>Go to the Grid Page</h1>
-        </Link>
       </div>
     </Router>
   )
