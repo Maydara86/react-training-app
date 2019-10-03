@@ -1,43 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Star } from '../Svg/Svg'
-import styles from './User.module.css'
+import classes from './User.module.css'
 import myImage from '../../assets/images/avatar.png'
 
 const User = ({
   id,
   name,
   date,
-  isFollowed,
   isStarred,
-  handleFollowClick,
   handleStarClick,
   readingTime,
-  useSimplifiedLayout,
+  children,
+  styles = classes,
 }) => {
   const starColor = isStarred ? 'gold' : 'grey'
   return (
-    <div
-      className={useSimplifiedLayout ? styles.smallUserContainer : styles.userContainer}
-      key={id}
-    >
-      <img
-        className={useSimplifiedLayout ? styles.smallUserImageItem : styles.userImageItem}
-        src={myImage}
-        alt={name}
-      />
-      <div className={useSimplifiedLayout ? styles.smallUserInfoItem : styles.userInfoItem}>
-        <div
-          className={
-            useSimplifiedLayout ? styles.smallContentContainerRow1 : styles.contentContainerRow1
-          }
-        >
+    <div className={styles.userContainer} key={id}>
+      <img className={styles.userImageItem} src={myImage} alt={name} />
+      <div className={styles.userInfoItem}>
+        <div className={styles.contentContainerRow1}>
           <div className={styles.nameItem}>{name}</div>
-          {!useSimplifiedLayout && (
-            <button className={styles.followItem} onClick={() => handleFollowClick(id)}>
-              {isFollowed ? 'Unfollow' : 'Follow'}
-            </button>
-          )}
+          {children}
         </div>
         <div className={styles.contentContainerRow2}>
           <div className={styles.dateItem}>{date}</div>
@@ -56,7 +40,6 @@ const User = ({
 }
 
 User.propTypes = {
-  handleFollowClick: PropTypes.func.isRequired,
   handleStarClick: PropTypes.func.isRequired,
 }
 

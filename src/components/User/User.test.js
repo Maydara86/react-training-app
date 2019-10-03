@@ -5,8 +5,8 @@ import { Star } from '../Svg/Svg'
 
 const user = {
   id: '5d552d0058f193f2795fc814',
-  isFollowed: 'active',
-  isStarred: 'idle',
+  isFollowed: true,
+  isStarred: false,
   image: './assets/images/avata.png',
   readingTime: 20,
   name: 'Walton Morton',
@@ -19,35 +19,35 @@ it('renders correctly when there is one user', () => {
     .toJSON()
   expect(tree).toMatchSnapshot()
 })
+describe('renders the right color depending on the `isStarred`', () => {
+  it('When `isStarred` is false', () => {
+    const mockFollowClick = jest.fn()
+    const mockStarClick = jest.fn()
 
-it('when the follow button is clicked a callback is executed', () => {
-  const mockFollowClick = jest.fn()
+    const testRenderer = renderer.create(
+      <User {...user} handleFollowClick={mockFollowClick} handleStarClick={mockStarClick} />
+    )
 
-  const tree = renderer.create(
-    <User {...user} handleFollowClick={mockFollowClick} handleStarClick={() => {}} />
-  )
+    const testInstance = testRenderer.root
+    expect(testInstance.findByType(Star).props.color).toBe('grey')
+  })
 
-  const button = tree.root.findByType('button')
-  button.props.onClick()
-  expect(mockFollowClick).toHaveBeenCalledWith('5d552d0058f193f2795fc814')
-})
+  it('When `isStarred` is true', () => {
+    const mockFollowClick = jest.fn()
+    const mockStarClick = jest.fn()
 
-it('renders the right color depending on the `isStarred`', () => {
-  const mockFollowClick = jest.fn()
-  const mockStarClick = jest.fn()
+    const testRenderer = renderer.create(
+      <User
+        {...user}
+        isStarred
+        handleFollowClick={mockFollowClick}
+        handleStarClick={mockStarClick}
+      />
+    )
 
-  const testRenderer = renderer.create(
-    <User
-      {...user}
-      isStarred={false}
-      isFollowed={false}
-      handleFollowClick={mockFollowClick}
-      handleStarClick={mockStarClick}
-    />
-  )
-
-  const testInstance = testRenderer.root
-  expect(testInstance.findByType(Star).props.color).toBe('grey')
+    const testInstance = testRenderer.root
+    expect(testInstance.findByType(Star).props.color).toBe('gold')
+  })
 })
 
 it('when user clicks on the star icon', () => {

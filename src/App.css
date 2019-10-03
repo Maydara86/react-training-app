@@ -1,30 +1,49 @@
-.container > div {
-  padding: 10px;
-  text-align: center;
-  font-size: 2em;
-  /* color: #ffeead; */
-}
-
 body {
   margin: 0;
-}
-
-html,
-body {
-  /* box-sizing: border-box; */
   height: 100%;
   padding: 10px;
-  /* background-color: #ffeead; */
 }
 
-/* .container > div:nth-child(1) {
-  background-color: #96ceb4;	
+.articleSummaryGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-gap: 1em 1em;
+  place-items: center center;
+  place-content: center center;
 }
 
-.container > div:nth-child(2) {
-  background-color: #ff6f69;
+.ListContainer {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 10px;
 }
 
-.container > div:nth-child(3) {
-  background-color: #88d8b0;
-} */
+.ListItem:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}

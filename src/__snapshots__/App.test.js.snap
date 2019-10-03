@@ -3,24 +3,24 @@
 exports[`My Connected React-Redux Component should render with given state from Redux store 1`] = `
 <div>
   <div
-    className="magazinContainer"
+    className="ListContainer"
   >
     <div
       className="articleContainer"
     >
       <div
-        className="smallUserContainer"
+        className="userContainer"
       >
         <img
           alt="Walton Morton"
-          className="smallUserImageItem"
+          className="userImageItem"
           src="avatar.png"
         />
         <div
-          className="smallUserInfoItem"
+          className="userInfoItem"
         >
           <div
-            className="smallContentContainerRow1"
+            className="contentContainerRow1"
           >
             <div
               className="nameItem"
