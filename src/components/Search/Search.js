@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Search.module.css'
 
-const Search = ({ search, changeSearchHandler }) => {
+const Search = ({ searchTerm, changeSearchHandler }) => {
   return (
     <div className={styles.flexbox}>
       <div className={styles.search}>
@@ -10,7 +10,7 @@ const Search = ({ search, changeSearchHandler }) => {
             type="text"
             placeholder="       Search . . ."
             onChange={changeSearchHandler}
-            value={search}
+            value={searchTerm}
             required
           />
         </div>

@@ -1,10 +1,10 @@
 import { createSelector } from 'reselect'
 
-const searchSelector = state => state.search
+const getSearchFromState = state => state.searchTerm
 
-const getSearch = search => search
+const getSearch = searchTerm => searchTerm
 
 export default createSelector(
-  searchSelector, // pick off a piece of state or the whole state
+  getSearchFromState, // pick off a piece of state or the whole state
   getSearch // last argument is the function that has our select logic
 )

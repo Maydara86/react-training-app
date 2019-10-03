@@ -10,32 +10,21 @@ import clickBookmarkHandler, { clickClapHandler } from './store/actions/articles
 import changeSearchHandler from './store/actions/searchAction'
 import usersSelector from './selectors/users'
 import articlesSelector from './selectors/articles'
-import searchSelector from './selectors/search'
+import getSearchFromState from './selectors/search'
 
 function App(props) {
   /* eslint-disable no-shadow */
   const {
     users,
-    search,
+    articles,
+    searchTerm,
     clickClapHandler,
     clickBookmarkHandler,
     clickStarHandler,
     clickFollowHandler,
     changeSearchHandler,
   } = props
-
-  let { articles } = props
   /* eslint-disable no-shadow */
-
-  const searchQuery = search.trim().toLowerCase()
-  if (searchQuery.length > 0) {
-    articles = articles.filter(article => {
-      return (
-        article.articleName.toLowerCase().match(searchQuery) ||
-        article.content.toLowerCase().match(searchQuery)
-      )
-    })
-  }
 
   return (
     <Router>
@@ -54,7 +43,7 @@ function App(props) {
             }}
           />
           <Route path="/article-grid" exact component={ArticleSummaryGridCard}>
-            <Search search={search} changeSearchHandler={changeSearchHandler} />
+            <Search searchTerm={searchTerm} changeSearchHandler={changeSearchHandler} />
             <div className="articleSummaryGridContainer">
               {articles.map((article, i) => {
                 return (
@@ -63,7 +52,6 @@ function App(props) {
                     key={article.id}
                     {...article}
                     user={users[i]}
-                    search={search}
                     handleClapClick={clickClapHandler}
                     handleBookmarkClick={clickBookmarkHandler}
                     handleFollowClick={clickFollowHandler}
@@ -83,7 +71,7 @@ const mapStateToProps = state => {
   return {
     articles: articlesSelector(state),
     users: usersSelector(state),
-    search: searchSelector(state),
+    searchTerm: getSearchFromState(state),
   }
 }
 

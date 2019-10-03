@@ -8,13 +8,13 @@ import articlesData from '../data/articles-data.json'
 const initialStates = {
   articles: articlesData,
   users: usersData,
-  search: '',
+  searchTerm: '',
 }
 
 const allReducers = combineReducers({
   users: usersReducer,
   articles: articlesReducer,
-  search: searchReducer,
+  searchTerm: searchReducer,
 })
 
 const store = createStore(
