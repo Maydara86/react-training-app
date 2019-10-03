@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import ArticleSummaryListItem from './components/Article/ArticlesList/ArticleSummaryListItem'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
-import usersSelector from './selectors/users'
-import articlesSelector from './selectors/articles'
+import getUsersFromState from './selectors/users'
+import getArticlesFromState from './selectors/articles'
 
 function App(props) {
   /* eslint-disable no-shadow */
@@ -44,8 +44,8 @@ function App(props) {
 
 const mapStateToProps = state => {
   return {
-    articles: articlesSelector(state),
-    users: usersSelector(state),
+    articles: getArticlesFromState(state),
+    users: getUsersFromState(state),
   }
 }
 
