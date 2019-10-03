@@ -2,12 +2,11 @@ import React from 'react'
 import './App.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Article from './components/Article/Article'
-import ArticlesList from './components/ArticlesList/ArticlesList'
+import ArticleSummaryListItem from './components/Article/ArticlesList/ArticleSummaryListItem'
 import clickStarHandler, { clickFollowHandler } from './store/actions/usersAction'
 import clickBookmarkHandler, { clickClapHandler } from './store/actions/articlesAction'
-import usersSelector from './selectors/users'
-import articlesSelector from './selectors/articles'
+import getUsersFromState from './selectors/users'
+import getArticlesFromState from './selectors/articles'
 
 function App(props) {
   /* eslint-disable no-shadow */
@@ -23,10 +22,11 @@ function App(props) {
 
   return (
     <div>
-      <ArticlesList>
+      <div className="ListContainer">
         {articles.map((article, i) => {
           return (
-            <Article
+            <ArticleSummaryListItem
+              className="ListItem"
               key={article.id}
               {...article}
               user={users[i]}
@@ -34,19 +34,18 @@ function App(props) {
               handleBookmarkClick={clickBookmarkHandler}
               handleFollowClick={clickFollowHandler}
               handleStarClick={clickStarHandler}
-              useArticlesListLayout
             />
           )
         })}
-      </ArticlesList>
+      </div>
     </div>
   )
 }
 
 const mapStateToProps = state => {
   return {
-    articles: articlesSelector(state),
-    users: usersSelector(state),
+    articles: getArticlesFromState(state),
+    users: getUsersFromState(state),
   }
 }
 
