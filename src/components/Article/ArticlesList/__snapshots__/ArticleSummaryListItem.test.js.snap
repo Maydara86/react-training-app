@@ -72,7 +72,9 @@ exports[`ArticleSummaryListItem renders correctly 1`] = `
   >
     amet aliqua cupidatat dolore Lorem elit voluptate proident tempor incididunt
   </h3>
-  <p />
+  <p>
+    nisi excepteur eiusmod Lorem id in nisi tempor ex anim 1
+  </p>
   <span
     className="readMore"
   >
@@ -111,6 +113,7 @@ exports[`ArticleSummaryListItem renders correctly 1`] = `
       <div
         className="responsesNumber"
       >
+        3
          responses
       </div>
       <svg
